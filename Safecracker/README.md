@@ -1,0 +1,1 @@
+https://adeadfed.com/posts/htb-sherlock-safecracker-writeup/
