@@ -1,4 +1,4 @@
-#Analysis
+# Analysis
 - Firstly, open vhdx file with SysTools VHDX Viewer, there is a obfucated js code, and other files. Based on time created in Viewer, the first file is created is redbadger.webp
 Q1: hash of redbadger.webp after computing is 2c92c3905a8b978787e83632739f7071
 - Check file rad897C.tmp, got the string that ransomware using to check admin privileges
@@ -108,7 +108,7 @@ Q9: T1574.002
 - Running malicious malware leads to ransom note that includes url for services portal, also file extension encryption
 Q10: yrwm7tdvrtejpx7ogfhax2xuxkqejp2qjb634qwwyoyabkt2eydssrad.onion:9001
 Q11: .evil
-#Questions
+# Questions
 ## 1. What is the MD5 hash of the first file the ransomware writes to disk?
 - 2c92c3905a8b978787e83632739f7071
 ## 2. What is the string that the ransomware uses to check for local administrator privileges?
