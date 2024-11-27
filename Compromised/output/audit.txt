@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Mon Nov 25 08:53:39 2024
+Invocation: foremost -v mal 
+Output directory: /home/kali/Desktop/sherlock/Compromised/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: mal
+Start: Mon Nov 25 08:53:39 2024
+Length: 1 MB (1288212 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.dll 	       1 MB 	          0 	 05/17/2023 09:38:43
+Finish: Mon Nov 25 08:53:39 2024
+
+1 FILES EXTRACTED
+	
+exe:= 1
+------------------------------------------------------------------
+
+Foremost finished at Mon Nov 25 08:53:39 2024
