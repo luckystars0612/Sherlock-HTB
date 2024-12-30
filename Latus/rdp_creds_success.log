@@ -1,0 +1,1097 @@
+2024-12-30 18:04:30,123 - INFO - [INFO] Starting RDP Credential Extraction
+2024-12-30 18:04:30,125 - INFO - [INFO] Extracting Master Keys...
+2024-12-30 18:04:32,285 - INFO - [SUCCESS] Extracted Master Key: e09ccfaac3e6a09f547bee06f8c0881ce95eac78241ebd5055b5e89c705524232dac8d6a8e156e6176d91728f79b73f3c667947b2499403971f373ddfff53ef3
+2024-12-30 18:04:32,700 - INFO - [SUCCESS] Extracted Master Key: 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+2024-12-30 18:04:33,128 - INFO - [SUCCESS] Extracted Master Key: 6f1bc6719f816a47727071fb2f074a9905cc8f6c20cde4418f1e16e3e01bb455abb48ebbb70c65f4cb078d1d2ea8c68c7342bc8de84eee30366f79e24fbac4f8
+2024-12-30 18:04:33,735 - INFO - [SUCCESS] Extracted Master Key: 5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+2024-12-30 18:04:34,257 - INFO - [SUCCESS] Extracted Master Key: e0a7e3a14093eedc59c6586ec5574d8f0076089700758e24921f02726ed9dc77dc8ff03e03fb9e03aa1052c1d570eb4a5b1fb9d61057427776a9fdfce28d89ed
+2024-12-30 18:04:35,856 - INFO - [INFO] Master Keys saved to C:\Users\a\Desktop\Sherlock-HTB\Latus\masterkey.txt
+2024-12-30 18:04:35,856 - INFO - [INFO] Searching for saved RDP credentials...
+2024-12-30 18:04:37,747 - WARNING - [UNKNOWN] Could not determine decryption status for: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\$I30
+2024-12-30 18:04:40,389 - WARNING - [UNKNOWN] Could not determine decryption status for: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\$I30
+2024-12-30 18:04:42,196 - WARNING - [UNKNOWN] Could not determine decryption status for: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\$I30
+2024-12-30 18:04:44,137 - WARNING - [UNKNOWN] Could not determine decryption status for: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\$I30
+2024-12-30 18:04:45,767 - WARNING - [UNKNOWN] Could not determine decryption status for: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\$I30
+2024-12-30 18:04:46,063 - INFO - [SUCCESS] Decrypted: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\063D7EF36287654137F1E552FF79E61E with Master Key: 5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+2024-12-30 18:04:46,064 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\063D7EF36287654137F1E552FF79E61E /masterkey:5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {ac986fb1-8431-4749-bc7b-92ecdf5d7d64}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 9aa2157385c1b9e3ed3914d6321813a97712b6effd7173df3090350ac7108eb2
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : 304dfe59dcb0bcc8a38a8901b2b71055de9f88433820dbdbcdb2e2829af0c5cf
+  dwDataLen          : 000000e0 - 224
+  pbData             : fc8d2a87f25db7ec01fc9b2839edb9ed61ba4bcb7e329a51aa5f78a87e77a736ffcbdd4f623d456c992725d7f1cfd6e8ef9b279f974daa4320d2c12aa9244fd1f829a33439aaca49ba296f4fe782fb8490ac3aef810e814652cb98eb249242713e9277db4eb2eabb9edd28258ecd0d3d14b846504cb4e4f18af6e43051bedfad802d964e6dd69b99f7fd2fa4a8637f9156fcd8b56544dcea3f5436f823d2686b49473b15c2290ab713dd08753a5064aadac96581424b0a0f0771d72c66f1309cdef5c34f61c8257279d32eb573987484562a2694635c6a38464a6da41af11e18
+  dwSignLen          : 00000040 - 64
+  pbSign             : 50d620c9e80100e05dab6f9abfb50947e5bf759a02004b712866ab9f09173bad78b22a61f1e89dd5f2267f5fb60df3dfe841e72461dd7672c44ababc99e80f0d
+
+Decrypting Credential:
+ * masterkey     : 5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 000000da - 218
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/26/2024 8:26:49 AM
+  unkFlagsOrSize : 00000018 - 24
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.70.133
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : HQ-DOM-03\Administrator
+  CredentialBlob : C@mv@0s3rv3r
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:46,072 - INFO - [RDP CREDENTIAL] Successfully decrypted RDP credential file: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\063D7EF36287654137F1E552FF79E61E
+2024-12-30 18:04:46,073 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\063D7EF36287654137F1E552FF79E61E /masterkey:5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {ac986fb1-8431-4749-bc7b-92ecdf5d7d64}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 9aa2157385c1b9e3ed3914d6321813a97712b6effd7173df3090350ac7108eb2
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : 304dfe59dcb0bcc8a38a8901b2b71055de9f88433820dbdbcdb2e2829af0c5cf
+  dwDataLen          : 000000e0 - 224
+  pbData             : fc8d2a87f25db7ec01fc9b2839edb9ed61ba4bcb7e329a51aa5f78a87e77a736ffcbdd4f623d456c992725d7f1cfd6e8ef9b279f974daa4320d2c12aa9244fd1f829a33439aaca49ba296f4fe782fb8490ac3aef810e814652cb98eb249242713e9277db4eb2eabb9edd28258ecd0d3d14b846504cb4e4f18af6e43051bedfad802d964e6dd69b99f7fd2fa4a8637f9156fcd8b56544dcea3f5436f823d2686b49473b15c2290ab713dd08753a5064aadac96581424b0a0f0771d72c66f1309cdef5c34f61c8257279d32eb573987484562a2694635c6a38464a6da41af11e18
+  dwSignLen          : 00000040 - 64
+  pbSign             : 50d620c9e80100e05dab6f9abfb50947e5bf759a02004b712866ab9f09173bad78b22a61f1e89dd5f2267f5fb60df3dfe841e72461dd7672c44ababc99e80f0d
+
+Decrypting Credential:
+ * masterkey     : 5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 000000da - 218
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/26/2024 8:26:49 AM
+  unkFlagsOrSize : 00000018 - 24
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.70.133
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : HQ-DOM-03\Administrator
+  CredentialBlob : C@mv@0s3rv3r
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:46,372 - INFO - [SUCCESS] Decrypted: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\6C654C19F716A9070776E8B6DBBE2DEB with Master Key: 5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+2024-12-30 18:04:46,373 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\6C654C19F716A9070776E8B6DBBE2DEB /masterkey:5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {ac986fb1-8431-4749-bc7b-92ecdf5d7d64}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 606a19552a2b1716e331f881e1e06dda60873ea5e907b50d810833823d753b18
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : b7666da7f543596eac20ae358e3bd0d3eef1852e859a70a2907315b28cde1ef4
+  dwDataLen          : 000000a0 - 160
+  pbData             : 5f02e3298dbcd22b2ede0f8d18ac23add1cc0b68dc286e1bbdec57006197123db7d4d83aae4406c99ac7ce2465c9c0720a861e6596e14c2e4f01f557b1c8d3e2e22d4fd489d1042393a9032005ea77f4945647153e8fd817bcf1f42048e5ec060993f69635d3824ad790b4ef7ba0c42caa6028d1c437c6034abb57af1a63d4d51ff57dce5d7b3f52e9f3e0bbada55e0743080615a705de37e6eb459eabd88ad0
+  dwSignLen          : 00000040 - 64
+  pbSign             : c933b7d8fac529c693ea69da6954bab98ac12c02bcc24367a9b3bcaa7402fbe48803fad0f449f7070ae676d4b9cbba61463067d2ebb87a38d9415d183c989097
+
+Decrypting Credential:
+ * masterkey     : 5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 0000009e - 158
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/28/2024 1:28:43 PM
+  unkFlagsOrSize : 00000008 - 8
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.70.128
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : User
+  CredentialBlob : 1
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:46,380 - INFO - [RDP CREDENTIAL] Successfully decrypted RDP credential file: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\6C654C19F716A9070776E8B6DBBE2DEB
+2024-12-30 18:04:46,380 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\6C654C19F716A9070776E8B6DBBE2DEB /masterkey:5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {ac986fb1-8431-4749-bc7b-92ecdf5d7d64}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 606a19552a2b1716e331f881e1e06dda60873ea5e907b50d810833823d753b18
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : b7666da7f543596eac20ae358e3bd0d3eef1852e859a70a2907315b28cde1ef4
+  dwDataLen          : 000000a0 - 160
+  pbData             : 5f02e3298dbcd22b2ede0f8d18ac23add1cc0b68dc286e1bbdec57006197123db7d4d83aae4406c99ac7ce2465c9c0720a861e6596e14c2e4f01f557b1c8d3e2e22d4fd489d1042393a9032005ea77f4945647153e8fd817bcf1f42048e5ec060993f69635d3824ad790b4ef7ba0c42caa6028d1c437c6034abb57af1a63d4d51ff57dce5d7b3f52e9f3e0bbada55e0743080615a705de37e6eb459eabd88ad0
+  dwSignLen          : 00000040 - 64
+  pbSign             : c933b7d8fac529c693ea69da6954bab98ac12c02bcc24367a9b3bcaa7402fbe48803fad0f449f7070ae676d4b9cbba61463067d2ebb87a38d9415d183c989097
+
+Decrypting Credential:
+ * masterkey     : 5902689a5601048b83a7858a842c20d79abff55d82c6d1a35148cc97533760b212d2354057fe3bbdb4d8fdf0ea6fdd1aa79d8bef0101136ebad6ce0eb73e93e8
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 0000009e - 158
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/28/2024 1:28:43 PM
+  unkFlagsOrSize : 00000008 - 8
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.70.128
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : User
+  CredentialBlob : 1
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:46,545 - INFO - [SUCCESS] Decrypted: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\836EB73FF4F0A21AE5B89F32E2EC4295 with Master Key: 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+2024-12-30 18:04:46,546 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\836EB73FF4F0A21AE5B89F32E2EC4295 /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : fbd796abad66e25b293e527d64c662c5809c1e1402b93dd486512d1dc5b9edea
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : 81bb2ba14f467956d3131cfbcb23ae4aa465840b8e143bc4ffa44e7d87cb1400
+  dwDataLen          : 000000a0 - 160
+  pbData             : b78733913287335bdf8858009f63cddaccc38822e48a3d106e4437b2d51d14dcafff34e90ebdb08dde53496ffa2ae77025a1c6fad32288dbcca637ded5ac6a35fe5b8631d881aafc2f133f13ed732580fadcf41a78286a2dfe57469cbb097d11d6458b8dcc84ec01902cd6e06adf25ec9964be47d1912173d4e930745478ca4c8b98d1fe24951c2780b8f5a10371da3106c8b48e877092599a3ac977da6a82c6
+  dwSignLen          : 00000040 - 64
+  pbSign             : 08333d9fb2b354b6b3efc4acbe19ab1b98d5b6f51e72c60764efa3b09fc5f40fcf5805ca65b3133cae213140c6af9649795971226531550f1eedbfbef30726e1
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 0000009e - 158
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/19/2024 9:43:34 AM
+  unkFlagsOrSize : 00000008 - 8
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.25.128
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : User
+  CredentialBlob : 1
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:46,554 - INFO - [RDP CREDENTIAL] Successfully decrypted RDP credential file: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\836EB73FF4F0A21AE5B89F32E2EC4295
+2024-12-30 18:04:46,555 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\836EB73FF4F0A21AE5B89F32E2EC4295 /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : fbd796abad66e25b293e527d64c662c5809c1e1402b93dd486512d1dc5b9edea
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : 81bb2ba14f467956d3131cfbcb23ae4aa465840b8e143bc4ffa44e7d87cb1400
+  dwDataLen          : 000000a0 - 160
+  pbData             : b78733913287335bdf8858009f63cddaccc38822e48a3d106e4437b2d51d14dcafff34e90ebdb08dde53496ffa2ae77025a1c6fad32288dbcca637ded5ac6a35fe5b8631d881aafc2f133f13ed732580fadcf41a78286a2dfe57469cbb097d11d6458b8dcc84ec01902cd6e06adf25ec9964be47d1912173d4e930745478ca4c8b98d1fe24951c2780b8f5a10371da3106c8b48e877092599a3ac977da6a82c6
+  dwSignLen          : 00000040 - 64
+  pbSign             : 08333d9fb2b354b6b3efc4acbe19ab1b98d5b6f51e72c60764efa3b09fc5f40fcf5805ca65b3133cae213140c6af9649795971226531550f1eedbfbef30726e1
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 0000009e - 158
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/19/2024 9:43:34 AM
+  unkFlagsOrSize : 00000008 - 8
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.25.128
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : User
+  CredentialBlob : 1
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:46,823 - INFO - [SUCCESS] Decrypted: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\DFBE70A7E5CC19A398EBF1B96859CE5D with Master Key: 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+2024-12-30 18:04:46,824 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\DFBE70A7E5CC19A398EBF1B96859CE5D /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 426e3e0ea96a13b90520788e9a34bb5fe05bf44e942a4baded7d765f3ca0d14c
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : f4724a1f58d1b1207e4917e91366338ef1be4a58ad6d7319c3a6303ba8662440
+  dwDataLen          : 00002a60 - 10848
+  pbData             : fc10ed2953a76c3232a704b4b84a3e7ff4a2514e3df338148ca5a7c7862410ac77eff10345e35a84861f73958b55970b721b65741c5651657d29feb8e592c84bc70ac3470fa9703c9588f74a87eb4185698fe2049fce7bf5f13725e2d5a96c7ff1cfe5f34030f47a3fd4f4ac2dde6eec946897d83e5d69bf1b0519ac090d3e0f6846a859f0fbc4d86bddb4f60a868766a55e25529b3cf87b6758bdc29d349691368d6687bbe96790785de24a41a6bbbb652b7e9d8fe81327503075a59ca2da5d31f9ba1af824462f4a511a1ffae7101e4dea527a3c9669fb368f0d3cabf4b41df503541de57206d1679637792d1dbea182b75d4b476a517e8dc9a143f859ca103207a272182fdc8e7a291ce66dd6f49003df943a31a1eb4aa806baa608ec22e3eba4961d53e9ea761cf523f736b8f190c040df01649c59e0b29b227cd4c17fa67a362e34d926d18725095adab5b47a5c356e304a06b7da33992740ebf3f7130460ae5021a42d74aa9db49c9b57ad65db93f8ff8c499d84c6bbfc32a8250a7e170b8a743f77d397cf50bb445708e4604aa363563a96674e16567ff34a91bf2565cece100a846ed654ebb646521fde11fee0d8efd714c822300f463311c0f884ce6bf3e48461e5c7eba088973850f20ddbad592b0e9457d4db0b6a8a1ec3a3c1ab316d68983993c4d168afbbbced5179d2ba62a6f85faecb765c9fefe05838000ca57a6c56da2508ab862a8390a1c6cef43af44cef42a58a7a6df0e2a2c647c3b2b6cd8357d5e3be5819c5b46490cf5f5c9ca80260186e364655b9d590a851427ad75cd60afd76c55c22fdf6bb86d857e410742da4a032c47624c1ec266cd097c819c5cb6d4f22f99d6396afe15933beaba61e83f6ff918cd9f609b35a99123f432024b69f0a09cae52e0a04d33ef83ae865da3130290813f79ce778e9b81f2f75119c2a8b38950f569de68677d920aaefc7f00f705e540a9743c2018ab2f95e8e2766ca14b91e25a7c92b35e96ca1de4194db2d7cde7daa3a24f6687a0a6f05df9673870ad9fe84404b5faaddd5ecfa0ce76c34438d3103f4dfe97311dd4a0b15751b8e1ef607d50b673d40a0d72057f530507993b20feda80efa13587e52d17bdb9123f12424c7fbba8d87be55cd453aa4adbd9b9fe36f178cb23c8349e578682651c2180c1ac2fb97eac78515a8fb51ca98b0a89a95bcce8fa6aafd75822e458c04aa9cdd7c0c34dc907dd6a7bf515e1ca28da09f4406de71d21a721ad112a60a2fd275acc20f3ae9f1a761381ad29e41041b2470b419684ff95c2cc7a1c77798aaf5accb4d9e5d2bd9ace87cdc3fb3a38fac6c83816d569b1488916f7c038af277dc28e4c013507fbc453eaf7bf24b23de58c9eb0a764addaef7533f238d79689d8aa005a0e774e2765ac025d4fdcb584a313dda39076c8d2aa869b3b01c6453751f833ee13f79d25f98ca4fd80c29ca94fabc63e114caf3a28e1a6e993619f4775fd6ef3b43c47cc87114409b41d4842edb7d5827bcc401977660a5f59b56fe75897eff173add0c800a573e6a75c8ead4cfc743c3c90ed0c0bc7feb1587d5aec406d9091ac77774206a2694dd83ebbcbdbcdbe2a8221df37393539c075fb1faef17c0ea430430e6ff973da55f118d789c0d5ac6c4a4c4007ea817910a89050f1daecd4d3b5a6f41c36b9f65d5905acd7f1f171c49f945fdaeb21f7b8417159942de68d8feebf5c36af88cbc23706d996c64c43022687dcbe9146fb70fa08ac25203d038a8473ecac5306795f603e12d761d263a65cc6e75a1af67c2c658a7846f1fda0f4874988c1bce7a482d5fc674310712e3f7567f493690847d71c64bbc2b43b966859103fff5af08a8516cf0188937e4d1f5059ed4f1cd4faf3a93958196915d4ef1b29d81e7b4b3c7f4d337f511066129533bef75386acf19a047c2364ba9151cf27a65eeae6de60589667e940c621967a2a1376549a03ce2c040d99ce1e4c38e5ce610a237ad667d9d852158caa7bb6e596ca1ed777b94f08c447fdee7b54504a4e4532e645f2d35b103a6a15d3e7fb7d928dfe84a34995e01d4cbeab26ddccb0211eaa723a8af29eacae1acf32c2c748df68584b314a0e8ccde63bfeb0ed92736a986642f8325149b242ca623f78e3ea85e285fbb19b87d6c1a27528c617e8350ae58cfd8595ac5aefd74bdf14c4d7a22acd595105a8f41295a260b9748c885170db536c817503d9e17af4eac3a6fc6e84b8548d5f4dcf0f81103e07c26d62c8b22159f90f6e13e588e886ea69b9a6a768a17520ca3f31fcd739c71a541c50e4bb50f9ffe9590692603d2f65624d7d7bf9d69a8bd56315f7037bf64fa911c72aa37216f2aa1ba64ab4b2c4748d767eeea036e3009af6fd5f09aa01688eaead82580397de817fdd519dd89ec7ad02815f56e1432ca0b0f027efcae67bafc9798724e410210d05c4a06afac1b2385138ecb2a1e6140849b1bdd47e3e1db0167d35f2f1c3c34ef44df75347e055ad0b440a86264df3845a3b1ff3ab42bf0a2834ccdda49415539b730b6cfc45524b65db834e18c0cbc31eaa8bf80afb96ffd5e118bd0105588727dac8c33c33258a70320e20c751ae4589d2930f3499a0569107b3cc792beedebd196ad66224aeca1fcec6b66cbe5dfccc6ceb743ec3d47a23918435df5ecd13a476d77e83e0dfc3ae479420de86281c6bba13f18972bded35d68551ba50a08f501fd4196c14f63eb3eb16fc4f3e9d925317f9e740efe737aa769a9425535fa8b3ea40b9f76c6d251f36f37acddbc35331ba95836b045a4a603ff3d6a77732291c98b75878e516c6122a35896f3a33f0bf4ad00c4d5629c1661ce84ea9dae4abf9119bfa8b6a5b60f7966b98fc4397afa6ac27ea31ec4f29f8d72f2773c89811764e503bf5e12ba6e6edf09f98f8618ba638ea1a25bb446a01bf10e0b9eeb7eb5994b3209e9244995ceaf23293d0e7ae1d0caf8aad24b34c4b86dcfd2dd6962f8ace9e62e3a7259d0035143523d3ba53e6127a405ceaa1b02dfa9b21e65b3246cde67fd52ae3e4c511acbb1bff28d30dae41d1c0bec93531d0b5cf39f398e136a0f782abb19bea1fddf287e65146e3cbec6ecbeebcbb27b00dbf076fc279bb8c722ffbcdafbab482a0ceb665ccfeb0e539e95967c3462a8ef7f766c8dfe6530983c6f32973d3eb083b80d68ff5de2598601e6b684aa5692b1db5d4fa562dc27ff232e9ba2ef9a912cb024687e3f8cb4aa61ec2c5d89277dfe5650345ca5480489c0655ad7f162b17984f8e8364557ec67c25aa8059589f1c0c406814afbcae237f53a6fe9c065a86ba48c20e8bcbe17287aba959601b85d237999b110100b210604a34ac0639af330ae64912b68ea6ce95112cebbaf2d68e055d34531fa86eeacedc9a36e31b945031776e6e352b4c4cc75428368392e0742049658c29f33bfb76ac1480ae7cdcfce2429657e61217337edc90a5c3bd81876930353e705be496537261b2dc5a5e9d3c1c7ac74604e3f2d733eb7ffd35708793af8266f803722194e5e0eadb5968652fd8d9328573968854764fa5317e02043be700b1755ef855ef2bf78826de2df98eaaefdf04897f7e2740cb74cdcc3aadd57f9ed0ab7fd217fbac5c6a7c7078f912134ba049028acbb3cd392c66bafd3e3ba7624f982dde8fc2222920970357ff526a5d789368d86620b7d2846338225af1be54a573953fbeecc170e300d4dbd05fd55a3cf24e1f665b5186bc3094b3c2518187af7cf70cdc5c1e84ca249ab5321b2b82a9cf38f3f8aa0184dd0a8ed5fb1a7ef292e812f6c182535d30f1f39691a94d368ae1aeaabf631eb7d883c8b5cb8ddbde2ac9179059892f7ac298cdb94fe033ecf555daad24adaccf9f4bbd88166eaa702e081d8e52cc8811c868efaf8ad881610613eb83eb2a4cfe162829843441996a4698bc863f493968dc372a7d2aa7d8c863a4b583a95becc5d794356070bf7638e325b75b3b35a7773a257194eabe5afffa03ba867dbdeda49f7d21009e97ad06292567e8ab6de1b6c151a1f9cee58d1e329e3563f8a674d635d11868bd9f50f23b400fb16099a4cfd6b324414cca911b18c13b57ba054641810204ddb2e24712cdeb5b2cd6981c117b904600134ef6bb7285418d2760535b7b098c91252cbe2c8a63065917247885fb08b242c19cee7287ae62a83679e9ffb5de2813dc4b7ac1c107fae737b002670b911eb196df77840d8d259dd07fd431720d933ff601e86d22909893cf9ea89874533775de519ca2b2c8e7e6ae832888302b2276fdcbab9a763e666112665613e987b7ff65ddc4d113d39db72fb77fb95b7da70f2d9ed88d63ae2d4b88ac3a49298798481ec33871af59e092446faa80a1ec8a9f589a89dba0286c0f4027440229ec6f83e45601a1255c1e38d0b5e5f3d347953425dd1f5b356cf09e28b8d599fc13419927ec3a96c042275045b0069d450919f09d41583bfc73dd411cfe483d980121056c51f19b7b8c2a789f66f51b38f46eaf71c754b1a4174e63211499a2c21234d0d9d8d93935be27a2b9aafe1bb56535f5863be5878c4ce2f5743dcbc306b6948ea4b260893aa5c9b2db690b7640c7789f5377f8b053bf207d4817a76ef37c83997c6df63ba4feb886cddcea7df8c02f5b5aceff7850b1044589e7f2ee6e060b1c40e590ae6a3512ff80e51549abc9f63c1b941e2741b142001c76946630a0f9f893d5aa4e8d924565e98b96461e1b1f522c9f71e98d9a057c5caf83669a67c468417d50f019d1d42d3c47ffd6c848ee34360b242bfce7890f12fceb374b5eab397cc3feb33665deab56093361eca70f225ce19a0ce133b8bb8069e7547337c747c3e79f446eaab66d3a0668b0776ea0a41eb1c8f2b5576027232302acc461595e4ae5d0faec3125c7f9b375b95323b3dbc920c2d01c7ed2d7c1cbac450f3a9306238877d4a5d0a5571f207a5a9d212452f743a57b9bd61a339d0319a87a3cea083487b91a816c3776261ebb83b9bd77e88483eee2ecbf065ed993ba9a980bd7929850bce0f2c8cb4cea8084f825299e9a5f115841f7347305e7b2de66f73918397771c7ce26676e22450a00c8d397c71aadc87c0109931f59d6a1c5ec3ceec090a40da99bb682fb13462e296cb14814434e526ee50e52ec326dcfcac46c5bcd319810e1e49008c93aaa3d1427231f6dea5abab1df5b3a5027e72b8d5b6d5c4a2b0b88f39b1483593493d669218003244512b87a75de0ce53e52f1ff0332c07b94cf344cb722ada81ed2f18a6093a30f337891f06ecf237020714233534deefc87ad0b3486ac292c57b0c7469a75ccb30a9db45c6a46511f7e6ca783779ad174162e0d7d4b27475deea2e09cfd80b35d7695f63a135859686a89c2ffa322367a7bba7fd6c937c3c27a189bd5ef33cbb0327e04aecaed1d0eabc11b764483bfe548f1552a4383b423eaf1ce7ce5c3405a23e7745e61aa54f4221d1e36385b6e37f333b17b4a05915a059b8215d6d5dcc2eb0ced9ad06e48f1aca0d89a005c5f2fe91f149cbd56b1c0710c82e27f8e952400c2961d012166d4e8964c842593228f788059aa79cb06ebfeaaa0f4b6b480141ab269390d1424ffee6eab12b6130dc292637724e18aadf0ce0c7999c85303a44f2ae8e55e0fc5fa50b8bb09e0c16f61f537fdcae2b255bd2fba552cba7fa739448f83a3a78ce8fabc15b9b855a8c3c34501948535e10c0556b9d67260cde05cb32f9e201d43d2bda318ec724244951f1a137fb2179ce1f609289c2b57fe3426c79c76883599254d88343aaf5b7a5662956d66c131d488edf185211cc9a4d86a19102bfe57bbef37824c400c5490575d2c5bfe865b4169ccd5fce57e93e1d9b72122d53c223d6c39b756aff62beb7914e1e453f37d5c426bf917e64bb950b9835c435bd8ab895a03463ffa574734d57fa35854d4f35add09928ec86e44c99831e187e1c91505a00f0e4495e47b94f295d3cccfe4605528578ea9b896ee4b24b08df9f2a86a571c83d0e4027e42a3ca992b4da0d4ef82213b13975a5a02b4ce6015853918975c1dd05f2f0d767ce4f1db99a9fa5c56d58ce37f256dbbb75062d090007c8c3078a59890a6f660285139571e01e6aefa645885d946482f35a75a8baf672573f6431a027afae916f173f36f4abc6a886a0a1181d06b55a090c993fe1251898dd939c15c0c6c8aa5d41530102571e5ab719e371c9c2e31ef6cbc00c6e9bff9a9a86124e760916c15bd256fe95b07c9bd74d3e5db13342311800ea0a4ed423f00fdb0e7a5de35ba770a6b07bd09e5f131e35e073f21840750b301b30bd13547f7d093c2ce563b34f6788faedc15212cb960375497ce858d0a5a51c59e2a47a6e9e57cf54f0ffe1076b7f3bcbdb67e24a89f703458d623639b2f12798cf6778cd8f93ac5c80d6f0bf29919aaf1308b707aef62f049406a40808a0d468048949c7915a8ddea1ce44413caecabdae082c8ba0c195c76205d582417001c3f87fb7051d21b42e71d14c89f3b9e6bdb7db569914d6f3ba1cb7289b019513bb6a90238486d659c4cb2f1dcc5930b3794e47ca0614435443e7f17a7bfb1447dadc88dbeccfb75fb28a86a7994b6e9bc39166ead5a3f726118a1ff8ba4bba5ed299850572c47fd26469e8131535cd43a9d96a6f95e4007acff468c350326d612e82103aa2577effdfb0bc0c81a3ab5ac3ca318a0943c1504b509bb8101ae376479744f8a625f0654e2f05c0b98a24b10560c57ab92f9ed7e4645aa8128943f40b3f67bb5832a313ef6718adfe7df66769a195c80cb736b690e41e45976a90c6cdb1e3d33e93e27746ed8eb8329d1758b26cabb3ed5a5829955a0e46ef3a1e56d2a4e2d8e28e9e032bb71b7d9dade2d73ffc9b10d6ccba96f30f7cd3c904364af9b0db308575018f22628e2d33a87533621572271bfd5e0d0b93dbb88011fb9551f0ebb6fafb1a378a8f9acd177e599e44355758ec8afe7a38a6610a7e973f623d10164766797655c425d058ba0c30cde2c9e051cb5eccbf2d47b2d6e45963669598ea200d70c0a94effe92686b18a61de8004bb97ef322a3328ce600f1941dc8106862c2419e427300a806438448006cf83ccd60ad6760cdf75cec35be2efbfde91225e3d96bc4853653fe63afbc9e8bf2ac29ff6dc72537a9b471f2979170ffcf76a0b95ea852fd4b65295d8073c1ef2345f127bc0fc5d2b1d6354e4b61c2054bce2762a883369a951cb997326dc6f2c9b4638c60199958273229de076606a943e093af836f92dd738cf91a97e93fc2f1e8d3dbbb393a96d014530b2328dff9a0722af8d03642d3bde3bfaa42608221b946aaa269e43e8c01dcdde70022ba0b06d4de066897dda4d583ce1ffb3046aebc75011d7ba4f861469146d0e35adb5687d0607c00186cb31f9e8c7879cacb2402f4918bca717618464cfb55089e0f05ae8ef1ae003e087a53d8b7e51879a8e1efed8b1abd2964295a2aad04fc9cc3350d598f30ab291ddaad3ae5503bc23097da59f2ef7f013516fb4fd118959724b5d54ced47754c23f53aa490f59cd26bee589fef6663458f43535d4e494598ff42fd870723f461191bff19f6a713f1546e6e092a59d6bb28c59f82e2212d394cfe10fac0adbac1c080d1033f0209549af939922c29982e6e6d0c6288dfdc917251302aff315f57d330657d6059d620323f2a605b32554a884648fa53c30c4c19aa11df7dcf23ea500cb743e9b5b69818c5010df9a08025295dd0f6b189560e4828e4fee9030b42960140112bb242c1bceb29179a8cff2fdeebc34163fd1a9c63102d8825b376f3a8b88e49f9aedac044a63b959c30e6dd1906a872230d21c783860fa848b50f79a50109b05a9848ad569632620603a10ce6e0c3bc22d0bf7b8dd5585fb0da19d916d9ac2ed4fa9bc0b876760cd9ccf1ceeecc9890815febaaebf6be59ddc94f67ed3aff008990b41708202cf4af11df2efd477359f102941f86016f0ecbf7f1c479ecae91d94c9445af35fe6d00fd5fc9c41ed7fbdf9d47d0fd561616ee0d9815c1b3cdc5350404f359db88e997a6f52077404d93a31453e7ee88c03c97c57fd63162b7b8830b4701ba49e6237c4ac194d72988611a13807b17761aa274eb220a9212b34f604e07fc4a331e8a3d38302c93c8151d6e754f9dab017ebc418789747c2a16f3357d9e555b2ccf90f375b1c87699c03ecb6ca5c84d08b1c0e4b38791678df0a73e6f503123c51f031e8671340060742cddcd67fc1f3e2ea50edb562333af05fa42c190995ba29ebac5e112d928bbd9e4cde0f56c8f91269d021d9a321e22f81d28dc1e29a685dcdfe4a9ae9833815becab812428981662016f9fca039609da5f1bdc5494dcece2ef6c99b7409100d3569cd7d13a0859ba6bb8167bf9ac3a6192bf3d7401c3fb8aa55b9e6128c88dc3ce21626281f5bc593959562fa0c86927d933d97e002c10574d91f3c341dce4fb9027ee357875d315d3d7edbf5205e51a6097c2e255df195bf272a87e575bfbdc9fb86e684bb12057bcca555c59bbad142d15f5375ab32b22f81f70fcc817e43e2691299c3a1ea0a9f1d4f5a6c450cf6bb4d2311344695ad129fa68447ee5b25210167fd30189f31e53e51334360f5ea7b8378532a9874896af39740a480edbf083e440e8468f147a8fc1182810b2d2613915816c736459a550857f13714a47225f4acc9c0deabe3797c414a32f333ab34d01544c0150fbb096f9540f5c1e89ede0ea6647c8d89299583e80c8c6599c2c94f7f46ae8598bae41cfc6242c5fbdc3fc376c5713f90f3b5b5d7bc791e740c4d9a1b6c2b362722b6aebb31c61bdcf32dc454328efb945811b1cbc1837a3ff8e72c1940772ff1ae457c39111077cdb05a0de46d5200f00e80383a7bcb304a28a95e3d9d383e39f5c987516a5ba20c7ce407de86854ec3321fdae51ae7b9f811de075b284010306330d92f13cb3ccb1d3ed75105364f19a55f5cf92c560088323529993967e871f7966d32f5db3d3aa1ab2b2ae52135d0d9ac881063ebedec5f3191781e36bde92d45052a67dde2725bb8c1feebbef11688909765f9d8ef53a2c8e3070824268f3db3e4edc58d605ade69e648484e3d0ceaf89fa01de6a4b2c7c22f6638449be7966af01f1f17b2d3f3b2aa178e989e37820ac4c888661b4f53161e79a15b1bbfbe730da71d90d7b8c6789094d44e06eedba68280a504ed05583d2a32ddbbff4af8d7c14b36a7bfca6fb333d22492867fb0269ea3036225fd69098239bff063bcb2fb407eed51a2540a410443e2d9a15b946d5a1814fd056eb3b47329506019252b6afbdb28174725f87d576a9a8d94c9edb616977b36773c26374b4b7b60a14c770e4bf6b6cb8fdd1e47fd4b00f0af0d1acfb2a69230646b944cc1177f5e7168b255541ad3ff8fbdae58702f3d30302a47ea72cb5988372e14bc02551fc6c8d673726945f935a9dd058b458d94e4eacee0d02dda0790a62a923608f3d63ca7f0272ec55cd3949a05164ce3bd4cccc846864216210581ca83141e632260224cb4ba3140e462436f6c62438b64f2303080f61ea1cd0fce4794d65ba0f9baa01c4e390fc0fac9fdb47e79c30903d968d710245dccf843b7631f1b0988f314402e8e29828565705c5930c9570502791c918fe847246b614f6018b70b5752ab3f85bd6574d5c8d4e48af42b810dc74fe8f4b3d877903e39d1a6d9b1d54e8f7f8d6b4499e584cacdcd07451a5dbe883e0ecb9dcbfc561fcaefd82beca1423b160e6ac7907a8aec6ecc1b08f4b08d6ff3eccb7463073b0547d8e008aedd1122c0359936d44aa5472e2dba147eb41417ca34e22af12ad97613081ab7e9217ebca0ef3d4ed5ab023d6142ebf066ea13dd0b1a3d00341fb246b7d8629fa8094250fcb801faca16910ff009838ebd964efd45513a38172a8ebeb5dedf339035f2d4303c8e9e697bf0a8ad87df8a5cc7ffe6f44024ddb1658cce9d0a740ef1dc8741801fef57ef524071a5bd4706764394335d2f5401f8ff98e408c9f03b895badb167e96d90b5ffd43d858dc8056075c3ab83af6a058ca72e9cba71100f4434455d2f0831d6420271636c9f36099c8c7c415aeb04374423d61f577ace276baa56cf5c976a7820cd6f8c8b2016f946d56256c74e2f76b4bb9a6237614c4c0f3f40d37a959ede829fbdb67727cf4f79e7191f8b523f95a145f280ad793de6ca2ee582d137a1b92bed92ad93063f02feacbbe989f2e29bcae31b4e2499091ee6801d8e2842d900f317ffe8f4b7f893831f7833936819925cf5dd5115619123d62ec5e0e9c7c5671c834742308b48fce50320b72eb078eb2b16dd3f7658c74eca5afbb21c920b2fa63b0f5fb772e21eda04a59fe848fd63e6018143ccf2b282fcaf91ece66adc98c755a965d1b61feaa5ed117d6ce11c80484ad2e6485dfc73618cea4564104cd4305b40a14482682b58ce0d77b15299c8d6bc7420df8efa40dcf20d8a78a2f7a61d3308513a73c240d9fe840cbf30a052242495838bf0a7b7cc084fa55deefed15a9e6b471590e0ee39d001b6b4d9310e645f6519e4e5c17db93f22b1cae0241b20bea763af7848d0f784d2e46a01735fd05f7491826405f7ae9acbc82b17164c1f1f57d4570a6905b90076365a2b523cf22ec9ebf7880ac81cdc162e1e8e567005fe07e48f2341c2969ee1f3bfa7ee25970c8fcf8e6ccece91503ad70d7fa5c5faade243578c15a5f40b7bee6b3bcee143821c4276a11516f4448fc24678544417078a7dba8e7280fa00126b549ed6812a7b89b8987f6c43a14c434e9cb2508e4b4e114aac3322bf434f79c3ec02738d576f3d8fe9c0de560693b867e3240d44b28fbb740b8666f1670646eacd7589dc4a7edbc78b598f85111320d4fb2f395f059d00a45781480bafde3fc0c9c86cda282795e3bf9263a64da702fe60799b04ce12eaf22f84c3a54139b8f80fdb39ca282142a4fed360ec33bb5839ece34c99ab97d92da3ea49a5ad6f3cf6c6fb41093c2e82d16e7922cea1e58b7210ffd6e72ee5fb9cca4c8ac31a6474b4d0a169126155f57f4c46276a3ff8303f323c8f2cb4bfbb7622952c136db275c9f6a9bc4919843e764319921aa8c8220ed78a49c1abf7ef877304d24887fac96ab2fbf81468054db82d2a59dae10a60ab6f1d2aa00b1ad86a0f50fbc51ee525158e36708b13dd976ae8d3ede35455bb329641848050cf8c6801f1a71db9ba1a7d3ad193e5a491e98d5c018348e49a6e78b159cbe7409ade051f8dcae05dede7cd00f62c2b34a8b7b766074f9b2940cdf600de533ac8d832968915a858228031cee5f68d145f09580e66bc930e76d2b8457ea498c7615eb7baa97f612cc1e0c202776fb45649694f2ee68670671d55f50614344f7c56a495004052cbf88829fad071d8d37be32849d616425ca75659422d1625fe3458f3d28bc5582a3be689ced9ec5f3d995a78d6e7a47fade180cce9d88da04ac4f2aefa658a23d785ec49c3455ad691c3ebdb88876dbb1511ca946688b0087e05bc9b45d3b291e0470a8b736a20390ce45a378e02b99e10cfdade37099ddd4f993a4e306d0a2ba2049bd0a0c5e7382528cabca6a979d7753c1b7d2e431372076135e834d447d9450b300cc7ef2fc6faadb6a45703e9867d980453b9feef8b538b8baaabfe51b982f5e7a09cd2adb395b2ff36344ac0ef41e544cb6db8f07e8ea4d2d65bf2c5bbca73b062dc6395ebacaa82b910f8a73f6e7acd3e7768eae2ea6befcebe5b184c3162cf88d72489a82c6cc7eeed54ffd1bedc1d8abfc41d44b88b310e1660ccc810dc1b667d7eec1a140f07ae4f4063accda76a69b48ad16320a368910ceb2e66fe12c6d0d38099c45ddb4ed7a2a77bb78040ba337888fd4f4c427704370a2eb14508d6af397a64b9be3b5ec822c30b1d1b9057c7fa4b5646c0197a845455a6a91db996136a36dd920297619d73eb2131c8ef212f775cd83426332b41c8ac1888e05c118c01e00b2d42f3e9625113df8fe76ab7971767c8bfff3c879b23f9e503e9f2a3d199153e80e3238578c1c7e1aae1a1096d0d2f022e9fff284d805bb8d6d21713d9b5b269e0c93dc0a857771a751f3d4cd241a59fbf82368598f275f445c23757eabae2db7052ff4179167741d71ba45aa466d0866b78337796f2f8fd635a99d82a0e5fcaa555634aaed07ebac8d6eb3b4b7e5ab9ef38e8860b55cdabb1781243bf4ec3bba80bd3d664b9cb4f05575fb522c299d20c19695477a24501e2ac3cdccbf076f87004b65a1944c2e077ddda022252aacd78d547ff49290c943eac97a7c6a5285c347db8b401eecc6b490602fc3eeeabc8d3ef1301ee7f018389d61c20982c234d54cf69ef052cd85980893f1b9ba261405e94fc1c28f34732dff8480c17d53e5996787c6ac1f2c4596b26f8f913268fb0a9e58868dd5d3d589973a810bf421cbaac2b213a6aea32135a4e5e2b0cdd6e8038cfe9d8cf9896932a9ed03aa8c48d8513b5b8cbddb679f24e9fb4741c722138856b70882c72e138acf049156c2446c1efc48da751c74b5f841b16fe305125cdc438872c6ec19b2767eee84c92bd76df96d7d6a17a9afacc0103a69f657be2e5fcc61b23a82889661e393422652f774754e9450509d0936db6830e0512fed2761a0e3a7d135176135a34d8ab174a9e60d25df9e1f932f2390cbc74b03729dd014a88548bd9ecc228d56f0d6d897e1fd2defc53085aa0896e34f0b8bab83c64e236f3b4a93d0f0dab7644fbc7546515a6ae4ee29d7185b4b94c8519446106158013b5d6aeeaea88087d80261949161209d73ae3434424977db009878502e4a323f8fb3f8e7bea923d338baa7886c73f8f813eb4516e68cbde06f7debeaa5522235ff92a155a62ea2fd2590da16a79ee160cbad2d8ef6b8dc22c8d03ae143316a298649dda98cfd3b9c6a64ed695414f06c7c238e9b91c0825893c43fad7545041e3362f8ee56d5702c4957ea8696a8f5bc336afb353c9e6b36502101bac57c1794483ce5c7b5a056dc2ac44c0566e51dd16b7adf84f7ac22c4e39f5d918cb02ee1ff5150d1a280605bdfc1830db780a6539975474c0210892450819fa81de9708ec2469705c3826a37dc3b9cb5401f677d03346b0b71a68a72dfc378b3bce75b4cdeaafe096c8da6136691c685ca811f2b255311a03cc283dde39de992fab3baed762e3774276bb47ee4bd7b6579c6ca330c5d19254a58660145e2e6dcf2eeebb84631be7cce21a7eb60dd09f4fc0a7c7cc5bf9e95c70ed080e1511b4dd69ee75ba3434a0bdd5d418b9739d833c6a0a1ccf7d5d6082a4d695dbcb5f29fa0e74e57a97aee802fd759e19712ec26be82d22221a8edc31ca32281f15817f7f67d82c85ac9b0d564a901259f0e170be457b85b05c3aadd502e466ded0391c90248aec34a22a41cb9c642415c24bb63af3461b17adf81a1c9c90e994e019f7e327b2c9372902d9a75b8741331f5e74f151d1c162fa02026488938037612888ed185b3f1617b7f030ec816299087eec603186c2db12f82a7bdcd1f184e1ab4b3bef8a0810d545d55bf21297c7ab869d12eb28896d33f81ef6cc3349240ca0e5949c777c55bba32564c0d9159c74454b681bbd1a505d2b1ae6db4a79974e595e55a2a818f7e47c4f600979d51528d8f7cb678dc038200408f5dd07a57cc849873d964f824927ceb2ab8c72ebaf423018369788ce163c9eec26274bc06402a81749ac9533f1924346819f08d20bf2664deb32b0a6125e42286b982adef4a0a5ab5dc633d630589e4e6c8335182f92f98539f8bf11b974616e2dfe8a754078812caa15d91c945293101d44cb3418e8cc3d346b7a629ef626332ebc4746f7258d5ee2863ac767a315c841f87e03a893d74b45915997810cd4221e573eb2ad4a83941c4654725457795bb903b15cf57c7dd6db377eb26a9fb89a3f35d537318da1196ac34f648e00617f8982c7cc853d8f77ced24d67832acba27b6385a91d10e44dbe8da937895b823688d49573c04d9b1c0b560247693b5c5972bacdb22a73ed9a64d476e19cb30c4d05c0adaccd8f9738736e9848d43b5e7e7ec0ca4f6e3e45ec6abdade29a16a6a308ec2a9659787affc8aa7b6c37388ede001983d0b9c58ebe79274908815c958ca0c8d3e39b3bce56d9936681fe5b2330faaae9880089cc44a06caf5537b7870e749b8bc0a072542198469f836499e768997f978dff078b1edf38e7544aa3437b9fc0c5aa6b1673e1aa7a348ccc0df9d59cd7a135047a9d372d8f4750f6174d0d8af105274e310c474735b6ff6fb22473241d3c2ea124b3eb949a1f462dd0051b28d3d94f847cf3cb19905f87d94a35e4d9f8c573be5616735b9c3939793c89052d14faaa250e001ada4d20b37c090bf3cada8eec456ff84f0c6b373278de040b0e1cd21de9df6cb2b55af1c0803e62c3ec3666ad0f809ba2c99ef65d459ecea7e0e003e41b04b0125b177eb45d494b1000f33a1d1bc4fab14bc95581874f22f8c6385fa2b51fa216120f2aa16fef91b93843fb35b1bf0dd432006dc37b65845e9c9001169411fcf2a1f38cf99305568eb043301e60db18b9068f3daa8b958c58e9ec782f3dc371abe0efb38eac9c917c06ac87bd8f321e69cbeeddd10047e1e1c74ee07e421d91290b74d966bf67c775095c69cb3c07cab37039e14dabe457cf3c71fb49a4211072c6dcdaa9c82b98b6f7c621e2dfb6ba143c856c698065188c57a3d263aab39e71f4e866936ca53643e46018e05b46e5fb507405f071811fbc589ba7457c7c6b289ac6494f91ff23d070a2926f4a4e7cbb1893f963c76e5f92ed0a6b83d773961a7e5cdd6cbaac4c83390e566755dff742d234accec8d0cb1f4f71f290e06ba1348811d25ed314a19f32f505f67df07a55020daa6f3a621f08c1022d0fcc6089b39b22e8d50784f0ae0e718fa8cd8a880299a4a34bf2759e5562f62501a8ff1691672e372a00473748f58b445fd04f37497f9ea6312d7fd4b90ccdaf11ceed445baea357286233bacd6a53c83c40fa921bc63644be119d6076de81d02f0a687e5e129516e969c1c6da742d7877337205da241f028e71e356b0dd4c31bf835c22e24ca386257adcecce1ee40bb9b50f2bb6ff0e01a031916cc3909d5de7bedb58818e1cbe6ef1c1cabec51937746e3dcadea788498cb53271ed847fac1adc2145f4b8bedfa8a2a6c4c7adbb587a44b4c87718e42a5dd1a9cefbc5fdb3946fb33a479cab18f4385623153f2e3c809220c63885e8e75da9b5f857c5680aded5651492fa37d90c44481835
+  dwSignLen          : 00000040 - 64
+  pbSign             : fca1ff7f79d764c4626aff6e9392253970ce2718b3928574fab0da604cace2a10e095ebfbb2e5078f9238a712f39b59464cbc05d2e4757110eb4bca150e81cac
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 00002a56 - 10838
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000001 - 1 - generic
+  Flags          : 00000000 - 0
+  LastWritten    : 6/19/2024 9:31:58 AM
+  unkFlagsOrSize : 00000000 - 0
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000020 - 32
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : WindowsLive:target=virtualapp/didlogical
+  UnkData        : (null)
+  Comment        : PersistedCredential
+  TargetAlias    : (null)
+  UserName       : 02iyqhxbnbcyaokd
+  CredentialBlob : 
+  Attributes     : 32
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:0
+    Value   : 01 00 00 00 d0 8c 9d df 01 15 d1 11 8c 7a 00 c0 4f c2 97 eb 01 00 00 00 e9 52 28 fd 13 38 72 41 ac 67 2e 38 80 b3 34 99 00 00 00 00 02 00 00 00 00 00 10 66 00 00 00 01 00 00 20 00 00 00 96 40 b1 b9 bc 58 8a 60 57 0b 9b be 6e 38 00 0c 4c 77 1e 55 c3 75 69 1d ad 97 dc b0 3c 15 1a 8d 00 00 00 00 0e 80 00 00 00 02 00 00 20 00 00 00 b5 36 3c 9c 9f b0 9f 0d 5c 17 aa a2 22 e8 a9 6c 20 3c 1d 75 f3 dd ab c0 4e a6 0a 1b 66 5c af 87 70 1e 00 00 74 4f 99 f3 31 1a c9 ee ca cb 31 82 ea 68 d8 a9 ac d1 89 38 02 26 ce b8 44 97 a2 e5 4e f3 f2 03 15 6e 04 e7 f1 56 3f 42 6f 17 b3 54 05 b2 bd 9d 9d 4a d6 fe 0b c4 dd 4e e8 77 fd 7b 79 70 65 b8 44 a3 d1 db d0 0f c9 8a eb 92 4c 20 ef 8f 1e 0e f6 b4 00 93 c6 a2 3a 4b 59 3b 1a 10 5b c1 30 6f ca c4 45 b0 20 dc a5 4b 59 62 03 41 58 d0 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:1
+    Value   : 39 80 68 ea f6 65 73 9c 42 71 13 19 6f 54 9b 82 6b d0 d3 53 0d fd d9 d2 2a 78 fb d0 79 7b 37 39 dd 12 16 fc b9 8d f2 6a 91 cb 5c cc 24 4f ae ac d0 37 30 d1 65 74 f4 4d ea 30 63 c0 35 a6 0f 6f 7f 31 fd 4d a3 84 2e 4b a7 b8 3d f7 cc 18 a5 b9 47 25 5b 44 3b a6 d5 0c 1d 02 24 6f a4 c9 ca 6b 68 78 c8 c5 c4 06 01 14 60 6e d7 0d d2 06 90 8e 1b 5d f2 63 bc 9c 37 ff 64 de df 85 59 a3 5b 92 c5 75 4f 15 98 d8 89 d0 63 cd a2 a1 bb fc 76 aa e7 c0 f5 e0 38 09 40 8b 6f 9e 3f 28 de 66 3f fe 0b aa 72 1b 4d 25 4d 96 60 22 66 7d e4 5b 6c 26 9a b1 43 d5 4f b6 eb 96 06 01 ca ee ac 02 19 9b ce 22 27 0a 0d 69 48 9c db a9 0d 8a 61 84 3e f0 01 2f 7d 24 02 16 d3 9e 09 23 72 f4 bb 82 f9 58 14 06 64 f1 06 1a 58 31 99 e5 1e 10 18 7b 9a fc 5d 01 be 7e 07 22 7d f7 0c c6 31 b6 67 c3 4c 4a 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:2
+    Value   : 40 ef 32 0a 01 8a af 93 3f 0d f8 63 6c 80 56 b1 20 e6 17 a6 c9 dd 13 02 85 e9 2b c9 a7 fd 3e 01 f3 a0 29 3c e8 b8 cc bb 50 b6 c7 76 12 74 e8 b2 2e e7 96 f5 5e 13 20 fe 03 5b b0 f2 5a e1 b8 be 57 44 e7 a4 cf 3e 15 01 d0 b3 be 8a a2 25 97 b8 01 ec 17 9a 3c a1 00 22 79 b5 9f 37 45 d0 f7 89 5d 93 90 15 12 0f ea da a8 af 7e 57 7d 92 da 48 03 a3 d6 cb 8a 8b 78 5e 6a 8f 60 07 99 4b 57 b0 c8 e6 06 a9 95 cc 48 1f 0b c5 fe 56 e2 2b 0a 6a 02 cb 91 54 de c9 e8 2a a4 f3 78 a4 77 dd cb 86 01 4b 16 96 69 7c 58 01 ee 20 d6 fc c4 4f 3e 20 a1 18 14 d6 77 87 c6 87 35 48 70 91 73 f7 15 c1 00 65 ab fe 93 a5 83 42 d6 9c 77 c6 f5 2d fc 26 58 2d cd b3 fd 89 9d 96 fd af c4 2d fe 2e e7 4b 76 c2 66 45 c1 1d 26 9a a1 21 de a1 24 5f 78 39 d4 94 e6 6c 46 f1 1f 6c a5 ea 8b b4 6b 57 f5 a1 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:3
+    Value   : 46 a8 a4 6d 6a e7 20 a2 1a b1 d6 62 d0 b8 66 43 d4 4e 5a d1 56 dd 9a 27 58 27 cd 23 5d 3c fe e8 53 e4 9c c2 c6 3f 0a 8c 75 a6 80 72 72 43 e0 88 8d 65 51 54 77 86 ae 56 1b a2 b4 1a 2e 54 6e 52 a0 19 48 11 f1 8c db 43 06 7a 9a d0 78 6b 89 d0 20 95 d8 71 b9 af 9b 7b 17 cb 63 68 c6 d2 ff f1 b1 82 3d 93 85 5d fe a0 9c b7 69 f7 b0 57 10 d5 f0 fc c1 4f b7 42 c5 ce bb 03 36 73 c0 7d 7a e6 cd 11 e2 a1 9b 53 e5 e8 33 53 16 00 a0 b5 64 11 19 2f 6c 5f ed 4b 87 2d ac 2f ab 96 ad 6c 78 ff 06 5b 5a 85 18 91 d8 5c c6 68 4f 68 7f 09 a0 b9 54 2a 57 50 29 44 d6 46 9d 5a 36 65 1b ae 90 6e 2e f5 b6 2f 40 37 9b 85 6c fc 56 22 a6 7f 01 e5 5a f7 6a 70 42 d8 5f 62 9b 66 60 7a 34 8d 2a f8 38 33 97 50 2d 52 37 22 7d 0a f9 52 68 32 22 c7 a1 3c e2 fd 00 9f cb aa 0b aa bb 73 16 c0 45 34 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:4
+    Value   : c2 a2 59 19 2e a9 68 52 ae c0 f3 0b fc 87 dc 7f 72 05 a2 48 e5 b1 1d 35 43 21 46 55 f3 67 0a 14 5f 1f 02 71 2c 6f aa f5 44 52 be bb 36 27 0b 33 08 5a 3b ea f4 25 fc b7 c7 84 b9 26 75 9a 89 8f ce c2 01 5c b3 ec c8 df 9d 63 4f b4 07 be 36 be 55 fa f8 3b 00 ae f5 b6 95 8c d7 c9 da c6 6f 02 62 20 1e 81 d4 fa 2b 25 ae 9b 71 3c 5c e8 b0 63 11 62 ca 48 c1 eb 56 2c af 6e b4 ed e7 e1 61 5e 50 1a 59 92 51 1d 08 26 6e a4 3d d5 fa 81 07 da 74 c6 f7 d9 f7 6a b6 c0 27 7f 7d a2 56 c2 f2 7c e5 5a 0e a4 ef e7 d2 40 a1 77 0a fb 29 a4 26 e6 a1 b2 8f 77 a3 fb d4 f3 f8 2f cd f2 fe 18 f7 bd 29 9d c7 2d 68 a8 b8 25 ca 49 23 51 f3 dd 7e 3a dd c8 74 a3 b0 c5 58 85 45 41 19 60 35 8e bb 2b 0d a9 98 c8 36 d5 48 d2 54 70 63 d2 b9 ed c4 7a 87 ea 05 53 ea f0 b8 1d 0c 5d e5 e8 5c 6c ce 7d 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:5
+    Value   : ae 04 73 03 bf e6 51 4e 22 a9 3b cc 56 7a ef c6 54 3e 62 26 28 00 59 f6 6f ae 39 62 f0 37 9d 86 79 e5 e7 84 da 7e 31 6b 1e 94 17 1f 7a 13 20 a2 b1 f4 bf 0e ff 08 63 7e a4 da 8b 4f f2 d1 cc ad 81 90 ec 4c b3 7e 81 6a 08 6f ef 4b 9b 55 ca 38 41 23 f2 04 e7 17 97 28 46 f7 bd 59 b2 ba 5c a4 75 38 62 42 07 61 10 32 84 04 82 22 b9 25 ef 23 0c 23 13 68 57 4f 4f 0c 2c d7 f0 82 a6 70 5f a4 1e 9e 48 9d c4 58 03 e9 a8 fd ba 0d a8 e2 c8 39 ac fa a4 56 a8 63 f4 4c f7 ba ef 02 60 76 72 fa e4 9a d8 1a e9 91 f1 83 67 a8 15 f4 fe 4c cc 03 6c d2 fe 8f 3d a6 cc 06 2a 74 f7 6d 0b 97 1d 63 e0 08 6a d8 d0 93 f2 7e ce 17 28 95 9c 38 1b 19 2d 99 ef 2f fc b0 f6 8e 95 68 8f 13 cf 0b 03 0d 44 ab d1 e2 78 47 42 7f 57 ba 0e 8d 26 12 d8 2a 36 df 52 de cf 82 3e d5 2b b2 2f 76 5f 85 6c 10 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:6
+    Value   : b4 3c 9c 9a 2f 49 e0 c5 67 4d b4 38 ee 70 3d ec 23 b3 2b bd d3 3a fa 3e a6 89 29 08 f6 37 9a 00 21 ae b0 17 25 23 a4 7e 0b f9 f8 f6 a8 51 c1 0d 8c be e4 0e e7 32 38 65 7b fb 96 81 78 aa 67 cc 23 02 5b d8 b6 5f 60 28 b5 0c 18 83 55 3b c5 e5 59 e8 09 c1 00 9f 11 4d b6 5a 64 38 08 c1 69 9d 8c 6c e8 d5 15 ef 65 eb b2 e5 04 c2 ed fc 5c 88 cb fa 9c e7 09 de 0d 70 74 1f 1b 38 39 47 4c 2f b8 fe 43 2f af ce fd 40 33 2c 7d 78 ea 0d f6 b9 00 85 2a 31 17 8f d0 b1 99 0d 2d 70 19 d6 fb 0c 34 f0 b3 f7 70 91 71 ca 39 6d 7b 46 3c c2 4f fc 11 a3 aa e8 ae d0 f5 26 a8 4e 3b f7 01 54 94 71 e0 70 eb dd cc 70 6b f5 48 af 30 91 cd 08 8b e1 21 c1 e3 46 25 33 9e d7 11 93 a3 65 c0 db 20 be 56 4a 8b 65 f3 29 ba 59 cd e4 0c 3b 6c 7b 2a 61 88 4c 79 c0 d9 cb f8 e4 fb 68 e9 85 4c 00 16 79 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:7
+    Value   : 83 ff b9 4b ef 78 2b fc 16 c6 d7 54 ea af 7d 72 e8 d3 00 23 d6 7f 06 37 c7 a1 7c 2d fd 9a 19 cd 53 93 09 19 47 dc e2 de 4d c5 97 85 56 64 8f 7c 23 7e a0 da 41 12 16 72 47 b6 1b 8e ff 5d cd ca 8c 55 35 a7 44 0a e5 32 5f b0 f7 70 24 d2 38 5d 40 f4 2e 51 ff 02 41 47 33 7a ae 4a 70 9c a3 0a 5a 5b 39 ae 06 8f 37 53 be 85 22 70 60 75 bc 64 b6 8e 38 fe 9c 1b 5b c2 f1 8c de 2b f1 5e 1f 3d bb 45 9a c6 25 fc b7 11 8e ed 64 72 6a 61 b0 cf 09 33 49 ae 4f b1 06 35 fb 54 4b ce 84 58 d0 81 0e 37 30 90 40 14 a7 03 0f 09 df 3f 1a 05 46 d7 0a 19 f9 79 36 d9 ce 99 98 39 a7 c5 bf 4b eb c3 db e5 a0 50 a7 05 24 d6 86 f2 99 4e b5 3f ca e1 71 86 cb 3c 9b aa 6b 64 d4 e9 ed 09 52 3a 46 77 b2 0a 5a 78 b8 d0 c1 29 0c 53 ad 3f 72 b3 45 e0 c0 ab 58 e6 de 77 5b 14 89 c6 cd 95 64 ad 44 0b 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:8
+    Value   : df 6e 40 a5 66 5e 4b 39 cf 96 68 d1 53 a3 95 c2 b6 2c f5 b3 be 11 0b 1b a8 cd 6c 5b f6 eb d1 95 98 d6 f5 ae da 3d 34 8a d7 97 ab 0d 47 90 a9 ca 10 67 2b 0a 33 03 3c d9 f4 df 0d 2f 40 f4 50 c3 f5 c8 3d 2a 47 71 eb 84 d4 9c e9 79 64 06 17 16 4c 4c cd 76 1c 41 6d 01 8b 6a cc 56 c1 36 cd 7c 6a 5a ff a8 17 7b 39 d6 3c 94 bb 71 e0 e5 2b 9a c9 28 a9 b2 94 3a 6f a1 83 cd 7c 6b 2d f5 20 ea 06 c6 01 4b 71 33 7b 14 dd e2 24 16 af 10 f1 5e 6b a1 27 2c ce 45 c3 74 9d 6b 2d f6 e3 16 8b a2 cf d3 dd 1c 45 b6 81 5c 41 d8 dc 95 ed a7 77 5a bc 2c 3a 94 93 1a af ef fb de 85 1d e3 d6 fa c1 cb 16 f0 fe 8b 15 46 5f b9 15 5c bc 88 8f 1e 77 f7 4b 51 83 e5 da b6 09 10 df 9c 17 bd a5 cb 64 da f5 82 f2 f4 57 9f f1 c7 c4 0c 62 9d fd a8 93 fa 51 b0 75 61 7b f1 ba 00 42 78 9b 61 3b 8b 85 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:9
+    Value   : 2f c5 ae be ec 53 f4 7c 7d 9a 32 d7 c3 2b fb 94 bd 95 c9 4c 57 4e 79 f9 09 51 c4 63 ab 56 f7 9e 26 f1 4d a7 1b 40 2e 7f 81 60 d0 96 af f1 42 64 7f e2 da 9f 72 65 97 be d3 ff 45 6b 85 68 4d 83 fc 5d 2a d9 5c 4c 2f 6e 88 b8 fa da 80 a4 8b 83 d7 5a fd 8c 50 ed 91 5b 1a 0f e5 93 50 8b 9a 84 d5 e1 92 77 26 c6 33 4b 52 6b b3 f8 31 bb f3 39 5b 5e f2 3b 7c fd f5 4a 2a 7f be 6f 2d fa 38 e6 09 90 7e 6a dd 5f 81 fb 1f 76 96 80 85 40 ce f3 7a 13 1a ff cd 93 86 c9 eb 1a 99 fe d6 df 4a e5 a3 37 5f de dd d7 61 6f 07 aa 93 8f 25 87 ce 66 f8 b1 17 b1 f8 5c 6e a9 25 f0 67 02 a7 b6 da 6d da 9c 58 25 58 12 22 4a c1 01 ab aa 04 b7 c8 03 b2 66 84 74 aa 6a 36 84 0a 24 aa 2f f3 fc e4 3b 62 53 06 45 b3 0a 4b 71 c1 b7 e7 a7 7f 46 4b ea a2 5d 15 98 48 79 cb c4 37 e2 02 59 a0 52 9d f5 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:10
+    Value   : 3a 76 04 85 4d 93 9b b0 f4 7c df c3 4f 97 c7 35 31 72 f8 c7 d9 0e 57 b0 e9 5e 9e ea d0 83 a5 8f e7 3d 30 f4 79 6e 8a e3 06 19 82 40 4b 21 de 44 25 b4 cc 45 f9 b2 5e 5d f9 9b f2 60 3b 4d 01 f3 f8 24 fd 9c eb 46 a8 ae 33 75 92 ee bd fa bf 13 f7 eb 02 50 37 ac 44 f9 7a 8a 38 f7 b5 9e 3e ba a5 fd 7b 20 1e 85 66 99 53 dc 7b c1 68 67 9c b3 63 1f cf 00 a2 19 03 cc 01 ba 79 18 ab 5e 29 be b3 a1 47 f6 5e 31 37 f5 eb 71 e2 8b aa 3b 4b 78 f0 87 8a 0d eb fe 24 ae 4d e7 e9 54 5d 15 1c 71 e9 e1 21 40 37 f7 bf c0 e9 6d 74 a9 f5 33 ba 73 23 f3 36 88 e7 48 9f 95 53 e5 bf a8 1a 85 c3 da f4 3c 55 ad 68 91 95 5b 50 39 2a 76 61 42 16 78 10 c5 51 92 09 ae 8f fb 1c 30 39 d1 a3 da 5f 58 bf c0 8d df be 29 a4 49 75 6a 85 9d 6a 57 06 78 e3 f3 3b c5 ac bc 02 a0 17 04 53 00 59 f8 85 9c 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:11
+    Value   : 08 66 e1 08 4c 62 e3 b7 5a cb 2a 7f 8c ea 63 42 03 80 9d 93 df 94 b2 78 61 7d 42 1c 93 03 cd 25 e8 14 94 58 91 53 9d 86 d7 0f a0 d8 1c 2b c1 2b 04 ea b4 79 ab d8 02 20 08 a3 d1 ad d8 b9 9e 0b c4 db 17 fa 32 93 bb bb 9d 30 61 8d c9 5d 04 ee b7 c5 f5 7d 53 dc 30 94 e3 43 71 dd 53 a2 51 3c ac 23 96 8d 43 e2 51 59 cd 02 87 b7 48 25 7f c8 b8 41 a3 c8 38 43 b9 8c 4d 81 5f a0 df e5 d4 21 5c 9c 8e ae 35 46 64 93 63 ed 1f c6 27 8f 8f 82 73 7a 02 42 62 76 30 fb e2 2e 69 34 b5 ca e8 0b 63 dc 6a 23 05 72 a3 e9 f8 b0 ba 8c 0f be ef 10 d9 6a 6d b0 51 5d 70 4d 0d 45 08 a7 dd 32 98 0f 1b 62 07 d2 30 88 f4 aa dd dc 1d 96 fc ad f5 79 b4 af c4 0e 36 86 d2 59 1a da 59 37 28 86 36 07 87 ba eb f2 50 61 f3 0a 00 9e af f1 42 06 3b 6f 4d 97 af c4 50 6c fa 4e 3d df af 0e c9 71 6f 7a 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:12
+    Value   : ba 36 5f de 10 00 89 75 9f 1a 28 73 e1 43 75 4d 98 1d fc 0d a1 a2 b5 32 9e b0 86 22 8a 76 6c a6 e2 b5 f3 27 cc 07 bf 1f 43 60 6d d8 77 25 61 35 76 df 27 28 18 0a 0b 04 7c 7d 05 22 3c da 1d 26 81 0c 65 ad 15 55 1d 48 47 88 b4 47 d4 7f 3f fe f5 89 65 fb 04 fa 58 12 96 5c d1 78 76 8b 95 23 cd 8e db 64 7f 5c 2f d9 8f 4c d3 12 82 79 d1 d3 90 78 2e 37 a3 df 00 5c 11 d7 68 10 7f 6a 41 d3 86 33 37 d1 1a 7f 33 f7 d1 b0 c1 9b 6c 6e 33 07 24 ec a1 85 08 bf f0 44 56 b7 2f 3f 56 bb 44 5c c1 84 33 b0 a5 07 6a 57 dc e2 9f 07 9c 2c a4 e4 e2 bb d4 b4 e1 a0 5a 5c 00 b3 bc aa 80 4f 47 70 b0 bd a5 be 34 f5 b3 d5 b1 5b 58 44 2f 1d 73 1b fb d7 82 7e b0 0e c0 1c d1 aa 73 0c 3e 29 cf 44 76 41 49 80 85 5b 71 b9 42 43 ef 34 b6 b4 b3 6f 09 6b b7 99 85 75 0e 95 0d 0e 22 7a 29 58 a8 62 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:13
+    Value   : 71 68 54 44 90 37 2f 87 84 df 01 c5 b7 fc fa a9 11 21 0b 9d c4 ce dc 04 4d 4b 85 60 14 ac 6f b9 f2 c3 31 91 87 96 10 2f f2 a0 e0 d7 12 6a 2c fd 78 22 aa 58 36 39 51 78 57 a0 9e 03 2a 3b f4 74 2d 37 b3 a7 7c 46 51 5a f4 fa 19 be ef 46 48 11 7c 19 aa 82 49 aa 3b 83 be 46 27 cf 4b 1a 0e 1f 54 da 51 6e 3d c1 54 42 5b 02 81 e9 50 de ff 13 20 ab e2 ec 1f 20 87 ee 83 5c 3d 64 1f ee b1 f0 76 73 44 02 fd 5a b4 fe 54 ec d3 b6 2f 20 70 a1 3d 28 29 23 38 04 6a bc 47 be 9f 45 0f 5e 98 ef fb a0 d7 cc 30 50 e6 40 ca fa 3e 63 3b e4 79 65 df 5e 56 22 24 3d b8 2f 72 2e 77 a9 48 1b a7 9c f5 8b c0 f1 21 8e 28 55 30 92 6a 32 43 13 cb f8 3e 85 c9 d4 1f be bb 6d 5b 82 bd ae 78 50 6a 3d dc ee 62 96 a0 f7 2c da eb 99 37 2f 56 94 cf 7a c9 4d 0c ed f1 f1 18 9f 4f ba fd 7f 9b be bc d0 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:14
+    Value   : 80 9e 08 e8 e3 d9 a7 fc 07 4e 24 ce d1 3d a9 e4 96 43 5d 48 d5 84 71 2c 80 d6 f5 61 ff 9a 91 fe 26 46 93 90 50 e2 ee 61 08 ce e0 b3 24 06 f4 a0 41 ac 58 f8 8a c2 10 6e f6 63 a6 ba 54 05 5f 4c 08 ce 30 dc 8f ed 66 02 90 43 a4 b9 c6 37 aa 9b ec 8a d3 2e b8 48 d6 94 da 8f 30 3f 01 f2 40 f1 a0 75 f3 15 8e ec 85 7c 58 46 34 ab b9 88 b5 e1 14 a8 61 17 72 df ba 0e 5b 31 1c fb 98 81 7c 6c 0a 6b cf 69 13 7f e8 38 61 f6 5c f7 e3 e5 15 3e 78 3b 5e ec db dd ce eb 88 14 a1 e5 8e e7 4d fe 61 6e 12 8a 1e dc ae 4c b5 92 ef c7 c7 af 30 69 82 64 58 58 4e 4e 6b 67 26 c6 d1 6d 9d d8 b6 68 70 c3 be 5e ff 3b af db 95 82 b9 d0 d5 1d 59 f0 3a 2b fa 31 55 74 87 2a 6b 5b 87 6f 98 10 16 49 ca c8 c9 e6 06 5e 2d b6 56 f4 40 55 40 ab ce 56 27 0e 77 e0 89 d9 e7 2c f2 cb 6f 18 b9 dd ea e4 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:15
+    Value   : 29 b2 79 4d 64 d6 13 f6 67 b7 30 2b 3d 15 4f 66 14 01 3c d5 8f 3b 46 37 60 d7 e7 10 08 23 8e 37 81 f5 c6 71 13 b4 bc 15 1b 23 d9 cf 75 71 ff c9 a0 1e 74 22 ab 07 83 46 14 c5 1b 51 3a 94 7e 8b f2 00 b9 55 17 c2 95 52 fe 0c d0 7c 32 93 32 82 8d 11 86 72 b0 dc 13 7d 22 55 d8 b9 cc 4b 6a f6 00 e5 37 6b a7 4b c0 9b 20 21 40 c6 50 e3 a6 c4 a0 f3 7c 59 9c f1 78 d2 05 53 03 5c a5 20 7c 80 bd bc 91 58 4c 15 4f bb 89 1a c7 5d 75 68 e7 dc f7 c7 2a da c6 64 c1 b6 e1 ed 48 6a ef 77 db 50 dc ec 05 bc 41 8f 7d 77 dd 46 5e a9 08 76 74 88 38 40 54 c6 75 c6 41 f0 d7 da 52 b3 e5 4c b7 08 93 db 1c b9 a3 57 12 7d 0b 11 cb 33 b4 08 86 8f 57 44 a1 c4 93 a4 6e 15 2a 5e 77 51 0e cb 31 30 43 2d f5 ec 9c 89 b5 e2 cc 05 36 d9 ff 27 cf 05 4f 7f be d0 bd 87 a0 92 b0 09 4b 74 d1 18 92 f7 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:16
+    Value   : 1f 0b ab 52 48 b1 aa 11 cd 27 03 06 fc 41 6c c5 4e 6b 06 79 2b b4 ae ad 4f 4b 71 1a 25 47 a3 db 6c b1 6e 7a c1 b0 fb 4f b2 dc 82 62 8f 33 67 20 69 a7 60 43 5d bf 1e ce 87 b1 7e fb 4e 26 e0 8d 32 38 79 08 6b 02 5c 11 73 93 ec cd 9d 35 52 62 ad 83 79 d2 de 4a 04 cb 1a 4a 93 e5 7b 2d 99 5d a1 4a 62 cc d4 3b cf f5 aa cb a6 b7 21 9c d5 f8 c4 fe ba c4 39 b3 69 6e 18 fd ef d3 d8 7b 56 c9 08 ed e0 cf 6a 92 75 c8 47 59 4f c3 a1 55 44 04 17 d0 83 b3 12 3c 4f 3a c7 85 c5 9c 51 16 91 a1 39 ca c8 73 9a 3b 2f 77 cf ff db d6 cc ca 35 36 ea 51 6b 2f 58 de 7a 07 10 98 92 f3 ff 96 f7 c1 56 cf c7 73 23 48 a5 29 d4 47 c9 38 e1 f5 6c 27 7c b5 ff 83 88 cf 68 1f 1a 2f 5e 45 8f f4 d8 9f 8b 99 19 f3 a7 43 93 97 f4 b1 e1 0f d0 f0 79 b8 48 08 20 c1 1f 8a 1a 67 b1 8f ca 4e a8 07 3a 8a 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:17
+    Value   : a1 c1 09 66 84 98 42 23 b2 a7 61 f6 b5 ff 99 a6 54 8d 20 e8 f4 72 70 da 50 f2 3c 3b 7b f8 e7 c5 99 4c d3 3f 2b 76 c1 15 b3 72 37 2e 51 1e aa 3a ae 7c 8d f8 70 86 50 60 2e 99 d9 3f a6 6c 96 cf 66 5a 41 a0 ff e4 e2 2e 01 bf b8 b3 6c 44 7c e9 ff a5 20 d3 ca bf 01 6c c3 8e 80 8b 82 78 40 62 5b 98 7f cc a6 2e 02 b5 f7 5e d3 11 7e 10 da 18 32 b3 fe c7 0a 61 0c 3a cb 21 99 b7 ef ce 81 11 80 66 30 db 4e 60 8f a6 ed df 6c cc 45 bf ab 01 ad a7 0d 55 e3 b0 e1 92 3e 16 af 6c e2 a8 49 54 71 f0 94 cb 54 dd df 90 42 46 89 90 df ed 45 a0 76 74 85 33 b8 83 c9 5a 03 93 a8 16 59 8e f2 2a 77 27 4c 9d f2 e7 52 dc 22 72 86 78 90 3b c0 df 56 6a a7 69 50 48 f7 3c 7f 7c 7c b8 82 2e 1b f8 10 c5 09 06 30 9c 54 8d cc d8 18 2f 30 25 45 1a 3f d2 5b 5d 7d d3 ed 7b c9 01 41 6b 21 eb 3f 79 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:18
+    Value   : 97 eb da 7a bc 11 18 54 30 e3 b3 4d 74 af ce ea c8 f8 64 d0 9e e2 40 6d fa 62 5f 1f 85 5d e7 2a a0 15 6e 8c fb ba 76 60 76 32 98 74 76 b3 3e 9b 4b 8e 91 17 00 12 fd 0a db e0 d7 34 05 63 20 60 c1 72 ab df fe 91 f7 e7 b3 0a b4 4b f0 b9 62 80 8b c8 2e 67 c8 49 3e f1 58 32 bf 57 1c 99 5d f6 18 48 4e 2c 1f 3d 7f 66 77 5c 01 f5 84 d7 11 f6 27 b4 e7 b3 99 d0 8a 4f c7 6d 57 cb ac e6 e7 c1 b3 6f 33 d6 27 4d 68 4e ce 42 a9 99 ec a8 05 eb a6 20 a0 5e 9b 7e 3b c9 c8 ee 9e dc 8a 66 35 6f 1b 9b e9 d3 e0 54 75 2f e0 75 f0 9b 7a f6 0c cd 6c eb a4 80 e0 11 4d 43 eb b5 96 8c 57 98 27 63 dd de 6d 44 a2 ba f2 84 af 17 54 10 72 d2 c9 ff 58 e5 45 c6 79 d0 99 7a ae 46 f6 17 44 0b dc 80 ba a6 a6 31 38 49 a9 dc 4a 81 ee b9 c5 80 07 22 89 bb b4 f4 77 b1 11 6a 07 06 1d 6c 03 bc 66 19 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:19
+    Value   : 8c 24 e2 ab 32 a3 22 ee 20 e0 eb 8b f6 e3 2b d3 25 e3 bf 6b 51 df 4c 41 88 74 67 97 47 0c d9 03 c4 14 46 c4 df c9 65 eb d5 4f 26 8b b9 d7 6d 22 11 e7 f4 94 d4 92 03 fe b0 08 4c 4a ca 3f fc d6 a1 bb 88 81 5d f2 88 c4 c5 85 99 40 ac 12 ef 43 48 d3 71 c9 b6 4e 55 a9 5f 22 e4 75 45 2f 1c a6 9e ce bb cd c7 a4 a1 5a a5 28 f4 1d 44 f6 c3 a4 db 72 75 4a e6 d5 24 01 1c 04 58 dd ff 78 97 39 a6 32 b3 b9 04 d9 a1 f0 7d 3f d4 c5 ee 01 7b 24 c5 21 9b db cd 5d c3 62 bb 68 75 15 01 c0 15 57 09 40 dd e7 bc b3 0e ab 90 b9 26 33 f3 0f 26 17 39 1f d7 7a 71 b0 ef a7 3d 26 c0 75 73 04 e8 aa 0b 98 bb 2d 41 9d a0 a1 a3 ec e7 f0 10 a7 36 fb 2f fe 0d 5d 34 17 89 4b ee 74 9b a1 78 ee a5 d6 2b 90 48 fa f8 72 7b 34 aa 09 a0 34 d0 52 f7 f0 8a 57 0f b5 fc 2f f9 74 98 d1 35 91 45 11 7a cd 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:20
+    Value   : b2 7b 5f 1b 40 8a e5 84 d7 f6 e7 36 f5 e6 1c c9 8b fb b8 c3 eb bf f9 ba b1 4c 67 1a b8 3f 46 83 1e 2f 4d 4d 59 b9 d3 eb 54 3d 21 60 6a 47 51 29 4d d8 69 1c 1c fd 67 79 5d a2 5b 9e b4 5a 5b c0 31 35 fd 80 55 36 a0 ca 18 40 0c 4a 0c 05 5a f2 7e c1 a8 0d 59 2c 82 3b b1 49 27 f5 2c 65 0e 7b 19 d4 46 78 c3 c8 ac 2a aa a1 5d c8 6b 11 61 aa 62 ed 13 0d 87 c9 44 52 30 cb dc 1b 18 e1 98 fa aa 4d 0b 8d 66 4a 58 ff 7c 41 c1 8e df 08 0a 26 ba 28 2e 57 da 37 c6 0c 83 fb ee e1 82 b2 d0 16 6d 38 ed 01 39 05 c6 b6 e3 c9 97 0b 66 f1 ba b5 f6 1f 9a 5a da 65 0f c5 91 7e db 08 3e cc f7 4a 99 6f b4 94 3f 93 62 12 89 c5 49 54 5f b6 c8 34 62 64 53 c2 90 73 b5 4e 28 d4 c7 49 cf 29 89 a9 2b 55 9f 08 9e 57 f3 a2 d2 ab c3 9e 5b b1 7b 0d 77 6b 8a 9b 81 df d0 a4 7b 2a 5e 88 b4 2a 05 bd 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:21
+    Value   : 9d 74 22 32 80 3d cf ca a1 99 6e 76 99 d4 52 f7 5d 1f 96 27 bf 5f e6 d2 e8 fc 12 ac 28 80 35 a3 dc 42 96 d7 e9 d1 95 da 6a 6e a2 04 44 b2 4e 8f e7 96 ed c5 c4 f6 7b 7f e8 52 76 2a 13 82 c0 dd fc ac 1b f6 b4 11 01 08 ec e3 59 cd 9c 89 3a 19 13 53 82 0d a3 81 04 ab 65 84 ff e0 5e 14 f5 d7 99 37 6d 9b f8 b9 26 90 37 d9 d5 61 0d 07 c2 4d 63 31 e1 80 f3 05 b3 5b 43 5c e3 8d 6c 32 ba fa 74 86 97 a5 6f 12 ff 67 14 c9 ff 9e 4d 98 c6 f0 19 92 a5 06 60 f8 07 d4 4f 32 85 94 a7 f3 87 9d af 54 10 08 3f 74 67 fb 1d de b7 fe 30 70 bc f7 f4 b5 63 40 5e 9a 5e ac 4e 5b a7 1c 4f f0 bb dd ae 6d f5 43 97 21 36 9e 8f 65 03 fd 52 43 87 dc 33 31 e1 9f 90 7d 80 5d 1a d8 e6 ef 6a 43 42 09 c6 1b a7 34 91 f3 6c 7a c8 67 4a fb 19 64 7e e9 b1 1c 45 6b 16 17 12 c4 9d 4a 8b 2b 84 ba 7c 14 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:22
+    Value   : 6b af 8f 0c 76 e1 22 ee a2 85 89 6a fd 59 65 56 3c 4b e4 cc a0 ab 3c f0 4c 17 c1 68 4e 9b d5 59 0b ce fd fb a0 86 ef 8a d4 df c9 1f c2 f7 69 cb 78 9b 49 75 1f bd bb 0f 79 ae b0 7e d4 d0 a4 5a c7 a3 a4 5b 4f 36 7e 00 68 58 27 76 5a 04 ff 1d ec b7 7c cf 54 41 bf 3e 22 95 59 3d 68 e6 03 cf 49 1f 5d 30 bc 4a 67 97 59 81 b1 37 15 3a c9 d7 8f a3 98 d0 50 f8 7a 18 3d 40 9d 3a 25 c8 0e 15 f6 a5 6b 2b ab 0f d6 91 ee 9b 37 ee f9 b3 bd fa 60 9d 4f 1d 73 2a 5d 27 e6 43 6f 4e f2 55 81 77 8a 57 0e 13 50 9b 13 ee 1e 22 40 b9 14 69 f8 f7 c4 a3 8a 64 a5 d7 b5 78 6d 2b cc 32 53 d2 dd a7 79 cf 7a e5 85 5f 7f da 3c c9 bf d8 9e f7 56 79 ad 73 b7 a9 90 d2 ca b9 c2 db 8c eb 77 93 1c fa 21 18 ba 6b 73 7f 6f b4 ff 7c bc 54 93 f4 cf 9e b9 cb 2c 66 cf c4 3a ef bd 34 98 90 7c b5 00 a5 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:23
+    Value   : 08 e9 07 f3 f1 2e 6d 0c af dc 64 a0 e2 f1 0f c5 f0 e0 85 d4 8b a8 3a c9 58 25 a1 75 51 8f 73 d6 be 42 49 be 82 90 94 d0 05 e6 8f c5 40 81 b4 93 dc 84 6f 36 dc 03 38 cd 78 1b 2e f6 a8 4d e0 1e a8 1f 5f 1e 41 57 f1 39 3d ce 0b 8c 09 d1 16 a1 cd 5a 81 5d 84 c0 82 35 39 b6 95 4a 02 28 66 ca 55 80 90 37 81 f9 11 c2 8a 30 a6 da 16 da 19 81 8e bd 93 ce 7d 23 98 a5 0f f0 6e 67 cb 7c 18 8b d5 4c 94 37 f0 90 d3 a8 90 9c f1 cf 53 bd 39 e6 42 0a 09 91 d6 29 65 f9 92 3e 81 4f f6 c3 1a eb 58 0e 04 6b ca 90 40 f7 19 5d 19 1c 41 fe f5 83 24 80 45 b5 ba f7 1f 82 be 9a 0b b8 13 ea 36 be 66 a0 65 fb a4 15 2a 9a 77 f4 0e eb 98 3d 49 34 60 f3 19 9b 08 74 2f d2 d6 26 4a 98 ac bc 9d 19 2b 3e 81 60 f0 ef 45 c9 f6 21 69 f7 bc fb 25 79 78 2b d8 e7 c6 7f 5b 44 fd 3f bc 16 a5 c3 66 91 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:24
+    Value   : 55 d9 23 6c d8 c1 c6 a7 e2 8b 62 68 5d e6 ab 02 5d a9 ff e7 15 7c c5 9d 8e 29 44 73 5f 6f 2d be 85 5d 1d 22 30 7b c3 ab be 74 d1 a6 f0 45 d5 8e cb 16 e7 9a c4 ae 2c 05 9d 54 6c c6 9d 28 21 7c fe 02 91 a0 74 96 08 b7 03 53 f9 4e fa 61 ad f5 ea a5 39 36 7d d9 1b 68 26 9a 56 53 92 02 ba c4 7a 17 3c 38 ee c3 6d 0d b9 a0 6a fd 58 b4 01 da 30 af f5 ff a3 f3 75 4a 7a 79 f8 7c e1 b7 cc 9f e7 ba 4a 4b 5a a3 b5 ac 5b a5 6c 2a 86 66 68 c0 ca db 17 00 ca df ef 67 95 25 19 1b 88 92 a5 9d e1 d3 11 3b 31 c4 d9 8d ec 32 9c 85 af c9 a4 52 c7 ae 1b 09 70 25 74 db f7 f4 10 2b bc c8 cf 95 39 74 3d 0c 8e 5d cb f7 61 ce b9 ea 57 8d 2e 4b a5 a7 ae 5a b4 66 fa 45 5c 5d ca 84 ef b9 0c fa ab ac 1a 38 d3 c6 d4 af 53 68 bb d9 ac e5 64 d7 9b 78 31 5f 74 96 4e 29 c2 5b 39 ff f3 2f 95 3d 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:25
+    Value   : 73 2c 6b 0c 0f b1 bd c9 f0 29 60 12 e8 c0 87 51 89 4b 12 be ae 1c b2 77 95 dd bd 51 09 ef f9 4e 7d 86 58 69 a2 43 26 d7 4d 72 19 50 58 c1 57 8c ca 8c 00 d1 dc b2 aa c2 03 70 df fa 35 01 62 29 ff 28 18 11 0a 78 52 a6 13 68 35 25 23 2b 56 1c 85 de fb ac 8d 98 05 ec 15 c5 c1 3b 5f 88 d6 11 9f 91 65 59 87 7b 2c 82 49 c4 fb 1c b4 c6 29 4f 99 93 b4 fb 09 87 f2 d8 30 fa 7e 8b 27 16 5f c6 7e 8e 4d 63 69 f0 d6 6b 1e 74 9b b7 6c 9e c4 7c ac 0b 37 ab d2 00 cf 7e 25 57 1b 6d f0 18 2d 44 5f af 73 8d 0f 0b 3d 25 fe 1e b7 f0 6e 20 6c 5d 39 f0 2c 3a 3c c3 e1 f7 51 8b 56 9a d2 b2 31 b2 ac 15 0b 38 00 0e c0 ee c9 a6 94 a5 82 12 8a 77 eb b9 41 da 3a 65 5b b3 8f 7d de be 69 35 ec 9c 0f 0a b6 e1 aa b8 b1 ad fb 70 aa 7b 0f 92 37 e8 40 57 89 6e d2 b4 8a cf 17 19 1c 33 78 ad 99 1b 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:26
+    Value   : 5f 12 86 d4 43 8d 63 91 d6 78 28 7f 8f bc 39 19 5a cb 82 3a 5d 09 4e 4b 2b fa f3 15 b8 24 fa 37 18 40 bb 96 12 87 b3 f3 d5 a3 85 f8 08 8a ef a3 35 ba 89 e8 83 26 cb 77 a4 5b c5 44 01 45 ef 0d 8d 46 34 39 b5 cf fb d4 26 f2 37 aa e6 e9 1f 6f fc 00 80 f1 e2 e3 7f 50 db be 8e d3 a4 02 a5 9c 05 84 b4 48 0f 62 25 07 64 af 08 28 df bf b4 3b 91 97 e6 f2 d0 5f 8c 68 14 0c ce 4e 66 54 8d 22 7b 42 2d e6 5c 29 9f 94 b1 45 75 30 ad 01 ef 43 e4 ea 91 72 ad ec a3 27 29 47 62 3d d0 8b 7a 49 fd 1e 8f f8 c4 b3 06 ef fa f3 5b f3 20 81 f5 4e 7f e1 0c e5 cf 59 2e 79 0c 0e 6f b9 da 3c 63 09 93 68 8a 07 65 dc cf 62 48 42 0a 1a 25 6c ef 8a f2 d9 6b 9a f1 9c 84 02 56 60 66 50 a6 c9 8d 94 9d 86 a7 f4 37 80 f7 d2 52 4b eb 52 a5 61 8b 83 46 06 25 45 4e e2 a3 1f 8e 5c 29 96 31 ea 83 86 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:27
+    Value   : 4c 1f e9 33 78 dc e1 57 f8 fc eb d1 a0 fd cf 03 40 e9 8d 61 eb 59 29 e2 48 e3 d4 8a c4 32 e8 bd e8 2b 11 bd 17 ef 4c 7e bf 49 4c 50 24 eb a8 0c 0e 7a cd 44 5f 61 a2 e3 93 17 1a 79 d0 c4 2a ba 87 46 5c 73 e6 3c ec 82 ee be 13 16 83 b8 06 6c e2 b4 b1 ba 1d 45 f0 92 ce 7f e2 38 55 66 36 db 01 d3 6c 01 97 af 53 35 1a 48 58 92 59 df 2f 97 b1 c0 55 98 a7 b9 02 77 01 1b 77 89 50 09 60 62 2e 7d cf 3f 19 7f 0f 1c 52 29 82 63 6e 72 11 b6 e5 d1 09 01 d0 89 6d 0e 75 18 6d 55 06 0f 61 5f 09 d2 7d 0b 2a ce d1 c1 25 e1 e7 3e fa 44 15 5f f6 29 39 6e 34 9f 4d 2a 4a 73 41 8d 67 8d 38 35 19 0f 6b 8a b5 11 c3 4a d3 dd a2 da 14 f4 ed 65 32 14 3c 5f 20 51 ad 47 b6 f0 11 62 e3 e7 98 1a ee 86 1f b9 30 04 7e ab 94 8d 2c 50 37 07 83 a2 78 66 26 ca 83 a0 4b 18 1b d8 c6 47 c6 2c 69 c4 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:28
+    Value   : cc 84 19 21 be 7d e5 26 fb 63 71 93 14 b2 20 b1 1d eb 2a 94 ee a1 98 de e9 90 88 5a c1 1e 73 d9 cb 9a a6 ae 5f 83 75 d9 19 73 4e b3 da e3 09 b7 56 82 47 30 a0 b0 0d 50 4a ef 80 44 4a b7 0a 17 6b d4 40 10 5e 35 3d bd e3 f7 28 43 1c ba b2 4f d5 34 b0 51 16 90 76 1b b1 c3 8e 2f 6a 2e 2b 67 e4 b1 3b e2 ef b1 c7 df c8 83 5a 12 10 10 04 74 e6 29 37 13 b5 2d d9 35 03 50 63 22 5a f6 1c ff ed 48 2e f9 49 a1 39 2d b7 63 8d 8c ca 06 25 87 34 f7 b6 33 13 3c 05 cf dc aa 04 f8 17 f1 5c 97 bd aa cd 2b 27 1f 03 8a 2c 43 bb e9 5b 81 35 96 4c f9 a2 59 c4 4b 03 59 25 b3 9d 1e e4 a4 a6 df bf 0f 45 45 d6 5c 11 95 17 cb 9e 1b 58 80 7f 50 f5 71 7a e1 dc af 62 55 33 d3 18 ad c7 f1 b3 53 00 a3 40 8c 9e 4a 36 bd 26 96 30 9e b5 74 14 4e f5 40 76 09 34 85 db 4a 79 68 cc e3 cc ff 20 0b 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:29
+    Value   : 9e d2 16 a2 68 4d 78 c9 be 4a 16 85 52 a1 d5 49 a3 0b 81 9a bc ca 3f 4d 5a bf 2e 1b 94 50 b0 dc ca 7c 1d fb c6 38 48 eb 31 5e 77 6b c8 fa 8d 23 7a ab 72 bc 25 11 d3 f9 a5 30 5e 0f 9e aa 95 d0 bd de 1b ee f1 33 a0 24 bd be e0 ef 89 6c a4 78 49 fe 46 d4 81 ce 0e 22 6e 35 43 af fa e8 92 06 02 ea 34 b4 25 63 01 17 e6 80 dc 6d 34 1c e4 88 7a fd bd b8 dd 2b 78 b0 48 53 f3 f8 5c 64 eb 5f 28 30 e5 c8 8a 75 42 2a d2 b2 e5 25 03 6e 2e 27 0d 1a 79 0f aa bd bd 6b be 47 24 77 36 0b c6 27 ae c3 48 f8 a3 c9 df f3 d3 8e d0 d9 9a 3b 6f 0f c2 6a 41 33 9a 63 4c 4d 3f d3 19 ec c0 58 a7 a9 01 6c 93 04 fe b9 17 4a d7 02 72 cd 93 55 2f 8c f6 8e 94 20 5a 41 e7 a6 a0 04 e4 3a a5 aa 1a a3 fa 76 98 06 af 65 2b 90 90 cd 4d 7b 1a 04 75 82 b9 58 ed a3 f0 80 92 00 45 55 ca bc e0 72 19 98 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:30
+    Value   : f7 6d 9f 1b 18 ec e9 6b d0 96 2e ad 0d 34 4d 1c 0c 65 80 7f 50 7b 96 07 63 ef ef 44 30 9e 5b 2f e8 e9 ec 98 f0 f7 2e 80 41 e0 cc dc 92 4b 87 08 4e 75 54 74 65 6a 68 94 53 3e 4b 0c 21 e9 f5 35 e1 78 cc e5 34 d7 a6 0d 66 03 04 e3 e2 b4 47 4a a6 8d 42 bd d6 f1 38 2d ba c2 dd 46 9a 18 d6 41 8b 4c 70 00 0d 8a 32 e9 98 7c 64 48 a0 4f 2b 1f a6 55 83 6d a5 fe 1d b7 ad 91 1f 0d 21 b6 0b fd 25 d2 54 20 56 aa 34 8e 07 1d 4d 5b 19 17 8f 30 2e 70 5d 69 4b 27 c7 8f c8 fe cb 25 24 42 db 86 e1 1e e5 50 20 39 25 a8 dc 9f 4e 4a dc 60 76 b6 cc c8 bc 54 74 cd b9 fe 7d 10 b8 23 03 70 36 1c cc a8 c6 6e 15 3e a6 e4 74 9e 7f 47 c4 71 da ed 91 f0 b8 81 f1 a4 5d 36 2e b7 a9 0d a3 8a ab a3 e6 55 42 0b d8 6c d9 02 fc ad d1 3f 37 ae b9 1a 32 4a d4 62 2d 10 03 df 45 6e e6 8e 93 0f a9 91 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:31
+    Value   : 87 bb 40 00 00 00 73 0e a9 b0 26 3b 1f 13 08 f9 9a 50 67 fa ec f8 d2 ca d2 4c 75 b2 01 c4 98 e2 c3 e0 79 6a 0a 88 d8 3f c5 4f 48 7c 90 5a 6e 64 64 11 62 e6 7e a5 c1 9c 4b 82 d7 e9 ae b8 13 0e 37 25 be d8 19 1d 
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:46,882 - INFO - [RDP CREDENTIAL] Successfully decrypted RDP credential file: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\DFBE70A7E5CC19A398EBF1B96859CE5D
+2024-12-30 18:04:46,883 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\DFBE70A7E5CC19A398EBF1B96859CE5D /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 426e3e0ea96a13b90520788e9a34bb5fe05bf44e942a4baded7d765f3ca0d14c
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : f4724a1f58d1b1207e4917e91366338ef1be4a58ad6d7319c3a6303ba8662440
+  dwDataLen          : 00002a60 - 10848
+  pbData             : fc10ed2953a76c3232a704b4b84a3e7ff4a2514e3df338148ca5a7c7862410ac77eff10345e35a84861f73958b55970b721b65741c5651657d29feb8e592c84bc70ac3470fa9703c9588f74a87eb4185698fe2049fce7bf5f13725e2d5a96c7ff1cfe5f34030f47a3fd4f4ac2dde6eec946897d83e5d69bf1b0519ac090d3e0f6846a859f0fbc4d86bddb4f60a868766a55e25529b3cf87b6758bdc29d349691368d6687bbe96790785de24a41a6bbbb652b7e9d8fe81327503075a59ca2da5d31f9ba1af824462f4a511a1ffae7101e4dea527a3c9669fb368f0d3cabf4b41df503541de57206d1679637792d1dbea182b75d4b476a517e8dc9a143f859ca103207a272182fdc8e7a291ce66dd6f49003df943a31a1eb4aa806baa608ec22e3eba4961d53e9ea761cf523f736b8f190c040df01649c59e0b29b227cd4c17fa67a362e34d926d18725095adab5b47a5c356e304a06b7da33992740ebf3f7130460ae5021a42d74aa9db49c9b57ad65db93f8ff8c499d84c6bbfc32a8250a7e170b8a743f77d397cf50bb445708e4604aa363563a96674e16567ff34a91bf2565cece100a846ed654ebb646521fde11fee0d8efd714c822300f463311c0f884ce6bf3e48461e5c7eba088973850f20ddbad592b0e9457d4db0b6a8a1ec3a3c1ab316d68983993c4d168afbbbced5179d2ba62a6f85faecb765c9fefe05838000ca57a6c56da2508ab862a8390a1c6cef43af44cef42a58a7a6df0e2a2c647c3b2b6cd8357d5e3be5819c5b46490cf5f5c9ca80260186e364655b9d590a851427ad75cd60afd76c55c22fdf6bb86d857e410742da4a032c47624c1ec266cd097c819c5cb6d4f22f99d6396afe15933beaba61e83f6ff918cd9f609b35a99123f432024b69f0a09cae52e0a04d33ef83ae865da3130290813f79ce778e9b81f2f75119c2a8b38950f569de68677d920aaefc7f00f705e540a9743c2018ab2f95e8e2766ca14b91e25a7c92b35e96ca1de4194db2d7cde7daa3a24f6687a0a6f05df9673870ad9fe84404b5faaddd5ecfa0ce76c34438d3103f4dfe97311dd4a0b15751b8e1ef607d50b673d40a0d72057f530507993b20feda80efa13587e52d17bdb9123f12424c7fbba8d87be55cd453aa4adbd9b9fe36f178cb23c8349e578682651c2180c1ac2fb97eac78515a8fb51ca98b0a89a95bcce8fa6aafd75822e458c04aa9cdd7c0c34dc907dd6a7bf515e1ca28da09f4406de71d21a721ad112a60a2fd275acc20f3ae9f1a761381ad29e41041b2470b419684ff95c2cc7a1c77798aaf5accb4d9e5d2bd9ace87cdc3fb3a38fac6c83816d569b1488916f7c038af277dc28e4c013507fbc453eaf7bf24b23de58c9eb0a764addaef7533f238d79689d8aa005a0e774e2765ac025d4fdcb584a313dda39076c8d2aa869b3b01c6453751f833ee13f79d25f98ca4fd80c29ca94fabc63e114caf3a28e1a6e993619f4775fd6ef3b43c47cc87114409b41d4842edb7d5827bcc401977660a5f59b56fe75897eff173add0c800a573e6a75c8ead4cfc743c3c90ed0c0bc7feb1587d5aec406d9091ac77774206a2694dd83ebbcbdbcdbe2a8221df37393539c075fb1faef17c0ea430430e6ff973da55f118d789c0d5ac6c4a4c4007ea817910a89050f1daecd4d3b5a6f41c36b9f65d5905acd7f1f171c49f945fdaeb21f7b8417159942de68d8feebf5c36af88cbc23706d996c64c43022687dcbe9146fb70fa08ac25203d038a8473ecac5306795f603e12d761d263a65cc6e75a1af67c2c658a7846f1fda0f4874988c1bce7a482d5fc674310712e3f7567f493690847d71c64bbc2b43b966859103fff5af08a8516cf0188937e4d1f5059ed4f1cd4faf3a93958196915d4ef1b29d81e7b4b3c7f4d337f511066129533bef75386acf19a047c2364ba9151cf27a65eeae6de60589667e940c621967a2a1376549a03ce2c040d99ce1e4c38e5ce610a237ad667d9d852158caa7bb6e596ca1ed777b94f08c447fdee7b54504a4e4532e645f2d35b103a6a15d3e7fb7d928dfe84a34995e01d4cbeab26ddccb0211eaa723a8af29eacae1acf32c2c748df68584b314a0e8ccde63bfeb0ed92736a986642f8325149b242ca623f78e3ea85e285fbb19b87d6c1a27528c617e8350ae58cfd8595ac5aefd74bdf14c4d7a22acd595105a8f41295a260b9748c885170db536c817503d9e17af4eac3a6fc6e84b8548d5f4dcf0f81103e07c26d62c8b22159f90f6e13e588e886ea69b9a6a768a17520ca3f31fcd739c71a541c50e4bb50f9ffe9590692603d2f65624d7d7bf9d69a8bd56315f7037bf64fa911c72aa37216f2aa1ba64ab4b2c4748d767eeea036e3009af6fd5f09aa01688eaead82580397de817fdd519dd89ec7ad02815f56e1432ca0b0f027efcae67bafc9798724e410210d05c4a06afac1b2385138ecb2a1e6140849b1bdd47e3e1db0167d35f2f1c3c34ef44df75347e055ad0b440a86264df3845a3b1ff3ab42bf0a2834ccdda49415539b730b6cfc45524b65db834e18c0cbc31eaa8bf80afb96ffd5e118bd0105588727dac8c33c33258a70320e20c751ae4589d2930f3499a0569107b3cc792beedebd196ad66224aeca1fcec6b66cbe5dfccc6ceb743ec3d47a23918435df5ecd13a476d77e83e0dfc3ae479420de86281c6bba13f18972bded35d68551ba50a08f501fd4196c14f63eb3eb16fc4f3e9d925317f9e740efe737aa769a9425535fa8b3ea40b9f76c6d251f36f37acddbc35331ba95836b045a4a603ff3d6a77732291c98b75878e516c6122a35896f3a33f0bf4ad00c4d5629c1661ce84ea9dae4abf9119bfa8b6a5b60f7966b98fc4397afa6ac27ea31ec4f29f8d72f2773c89811764e503bf5e12ba6e6edf09f98f8618ba638ea1a25bb446a01bf10e0b9eeb7eb5994b3209e9244995ceaf23293d0e7ae1d0caf8aad24b34c4b86dcfd2dd6962f8ace9e62e3a7259d0035143523d3ba53e6127a405ceaa1b02dfa9b21e65b3246cde67fd52ae3e4c511acbb1bff28d30dae41d1c0bec93531d0b5cf39f398e136a0f782abb19bea1fddf287e65146e3cbec6ecbeebcbb27b00dbf076fc279bb8c722ffbcdafbab482a0ceb665ccfeb0e539e95967c3462a8ef7f766c8dfe6530983c6f32973d3eb083b80d68ff5de2598601e6b684aa5692b1db5d4fa562dc27ff232e9ba2ef9a912cb024687e3f8cb4aa61ec2c5d89277dfe5650345ca5480489c0655ad7f162b17984f8e8364557ec67c25aa8059589f1c0c406814afbcae237f53a6fe9c065a86ba48c20e8bcbe17287aba959601b85d237999b110100b210604a34ac0639af330ae64912b68ea6ce95112cebbaf2d68e055d34531fa86eeacedc9a36e31b945031776e6e352b4c4cc75428368392e0742049658c29f33bfb76ac1480ae7cdcfce2429657e61217337edc90a5c3bd81876930353e705be496537261b2dc5a5e9d3c1c7ac74604e3f2d733eb7ffd35708793af8266f803722194e5e0eadb5968652fd8d9328573968854764fa5317e02043be700b1755ef855ef2bf78826de2df98eaaefdf04897f7e2740cb74cdcc3aadd57f9ed0ab7fd217fbac5c6a7c7078f912134ba049028acbb3cd392c66bafd3e3ba7624f982dde8fc2222920970357ff526a5d789368d86620b7d2846338225af1be54a573953fbeecc170e300d4dbd05fd55a3cf24e1f665b5186bc3094b3c2518187af7cf70cdc5c1e84ca249ab5321b2b82a9cf38f3f8aa0184dd0a8ed5fb1a7ef292e812f6c182535d30f1f39691a94d368ae1aeaabf631eb7d883c8b5cb8ddbde2ac9179059892f7ac298cdb94fe033ecf555daad24adaccf9f4bbd88166eaa702e081d8e52cc8811c868efaf8ad881610613eb83eb2a4cfe162829843441996a4698bc863f493968dc372a7d2aa7d8c863a4b583a95becc5d794356070bf7638e325b75b3b35a7773a257194eabe5afffa03ba867dbdeda49f7d21009e97ad06292567e8ab6de1b6c151a1f9cee58d1e329e3563f8a674d635d11868bd9f50f23b400fb16099a4cfd6b324414cca911b18c13b57ba054641810204ddb2e24712cdeb5b2cd6981c117b904600134ef6bb7285418d2760535b7b098c91252cbe2c8a63065917247885fb08b242c19cee7287ae62a83679e9ffb5de2813dc4b7ac1c107fae737b002670b911eb196df77840d8d259dd07fd431720d933ff601e86d22909893cf9ea89874533775de519ca2b2c8e7e6ae832888302b2276fdcbab9a763e666112665613e987b7ff65ddc4d113d39db72fb77fb95b7da70f2d9ed88d63ae2d4b88ac3a49298798481ec33871af59e092446faa80a1ec8a9f589a89dba0286c0f4027440229ec6f83e45601a1255c1e38d0b5e5f3d347953425dd1f5b356cf09e28b8d599fc13419927ec3a96c042275045b0069d450919f09d41583bfc73dd411cfe483d980121056c51f19b7b8c2a789f66f51b38f46eaf71c754b1a4174e63211499a2c21234d0d9d8d93935be27a2b9aafe1bb56535f5863be5878c4ce2f5743dcbc306b6948ea4b260893aa5c9b2db690b7640c7789f5377f8b053bf207d4817a76ef37c83997c6df63ba4feb886cddcea7df8c02f5b5aceff7850b1044589e7f2ee6e060b1c40e590ae6a3512ff80e51549abc9f63c1b941e2741b142001c76946630a0f9f893d5aa4e8d924565e98b96461e1b1f522c9f71e98d9a057c5caf83669a67c468417d50f019d1d42d3c47ffd6c848ee34360b242bfce7890f12fceb374b5eab397cc3feb33665deab56093361eca70f225ce19a0ce133b8bb8069e7547337c747c3e79f446eaab66d3a0668b0776ea0a41eb1c8f2b5576027232302acc461595e4ae5d0faec3125c7f9b375b95323b3dbc920c2d01c7ed2d7c1cbac450f3a9306238877d4a5d0a5571f207a5a9d212452f743a57b9bd61a339d0319a87a3cea083487b91a816c3776261ebb83b9bd77e88483eee2ecbf065ed993ba9a980bd7929850bce0f2c8cb4cea8084f825299e9a5f115841f7347305e7b2de66f73918397771c7ce26676e22450a00c8d397c71aadc87c0109931f59d6a1c5ec3ceec090a40da99bb682fb13462e296cb14814434e526ee50e52ec326dcfcac46c5bcd319810e1e49008c93aaa3d1427231f6dea5abab1df5b3a5027e72b8d5b6d5c4a2b0b88f39b1483593493d669218003244512b87a75de0ce53e52f1ff0332c07b94cf344cb722ada81ed2f18a6093a30f337891f06ecf237020714233534deefc87ad0b3486ac292c57b0c7469a75ccb30a9db45c6a46511f7e6ca783779ad174162e0d7d4b27475deea2e09cfd80b35d7695f63a135859686a89c2ffa322367a7bba7fd6c937c3c27a189bd5ef33cbb0327e04aecaed1d0eabc11b764483bfe548f1552a4383b423eaf1ce7ce5c3405a23e7745e61aa54f4221d1e36385b6e37f333b17b4a05915a059b8215d6d5dcc2eb0ced9ad06e48f1aca0d89a005c5f2fe91f149cbd56b1c0710c82e27f8e952400c2961d012166d4e8964c842593228f788059aa79cb06ebfeaaa0f4b6b480141ab269390d1424ffee6eab12b6130dc292637724e18aadf0ce0c7999c85303a44f2ae8e55e0fc5fa50b8bb09e0c16f61f537fdcae2b255bd2fba552cba7fa739448f83a3a78ce8fabc15b9b855a8c3c34501948535e10c0556b9d67260cde05cb32f9e201d43d2bda318ec724244951f1a137fb2179ce1f609289c2b57fe3426c79c76883599254d88343aaf5b7a5662956d66c131d488edf185211cc9a4d86a19102bfe57bbef37824c400c5490575d2c5bfe865b4169ccd5fce57e93e1d9b72122d53c223d6c39b756aff62beb7914e1e453f37d5c426bf917e64bb950b9835c435bd8ab895a03463ffa574734d57fa35854d4f35add09928ec86e44c99831e187e1c91505a00f0e4495e47b94f295d3cccfe4605528578ea9b896ee4b24b08df9f2a86a571c83d0e4027e42a3ca992b4da0d4ef82213b13975a5a02b4ce6015853918975c1dd05f2f0d767ce4f1db99a9fa5c56d58ce37f256dbbb75062d090007c8c3078a59890a6f660285139571e01e6aefa645885d946482f35a75a8baf672573f6431a027afae916f173f36f4abc6a886a0a1181d06b55a090c993fe1251898dd939c15c0c6c8aa5d41530102571e5ab719e371c9c2e31ef6cbc00c6e9bff9a9a86124e760916c15bd256fe95b07c9bd74d3e5db13342311800ea0a4ed423f00fdb0e7a5de35ba770a6b07bd09e5f131e35e073f21840750b301b30bd13547f7d093c2ce563b34f6788faedc15212cb960375497ce858d0a5a51c59e2a47a6e9e57cf54f0ffe1076b7f3bcbdb67e24a89f703458d623639b2f12798cf6778cd8f93ac5c80d6f0bf29919aaf1308b707aef62f049406a40808a0d468048949c7915a8ddea1ce44413caecabdae082c8ba0c195c76205d582417001c3f87fb7051d21b42e71d14c89f3b9e6bdb7db569914d6f3ba1cb7289b019513bb6a90238486d659c4cb2f1dcc5930b3794e47ca0614435443e7f17a7bfb1447dadc88dbeccfb75fb28a86a7994b6e9bc39166ead5a3f726118a1ff8ba4bba5ed299850572c47fd26469e8131535cd43a9d96a6f95e4007acff468c350326d612e82103aa2577effdfb0bc0c81a3ab5ac3ca318a0943c1504b509bb8101ae376479744f8a625f0654e2f05c0b98a24b10560c57ab92f9ed7e4645aa8128943f40b3f67bb5832a313ef6718adfe7df66769a195c80cb736b690e41e45976a90c6cdb1e3d33e93e27746ed8eb8329d1758b26cabb3ed5a5829955a0e46ef3a1e56d2a4e2d8e28e9e032bb71b7d9dade2d73ffc9b10d6ccba96f30f7cd3c904364af9b0db308575018f22628e2d33a87533621572271bfd5e0d0b93dbb88011fb9551f0ebb6fafb1a378a8f9acd177e599e44355758ec8afe7a38a6610a7e973f623d10164766797655c425d058ba0c30cde2c9e051cb5eccbf2d47b2d6e45963669598ea200d70c0a94effe92686b18a61de8004bb97ef322a3328ce600f1941dc8106862c2419e427300a806438448006cf83ccd60ad6760cdf75cec35be2efbfde91225e3d96bc4853653fe63afbc9e8bf2ac29ff6dc72537a9b471f2979170ffcf76a0b95ea852fd4b65295d8073c1ef2345f127bc0fc5d2b1d6354e4b61c2054bce2762a883369a951cb997326dc6f2c9b4638c60199958273229de076606a943e093af836f92dd738cf91a97e93fc2f1e8d3dbbb393a96d014530b2328dff9a0722af8d03642d3bde3bfaa42608221b946aaa269e43e8c01dcdde70022ba0b06d4de066897dda4d583ce1ffb3046aebc75011d7ba4f861469146d0e35adb5687d0607c00186cb31f9e8c7879cacb2402f4918bca717618464cfb55089e0f05ae8ef1ae003e087a53d8b7e51879a8e1efed8b1abd2964295a2aad04fc9cc3350d598f30ab291ddaad3ae5503bc23097da59f2ef7f013516fb4fd118959724b5d54ced47754c23f53aa490f59cd26bee589fef6663458f43535d4e494598ff42fd870723f461191bff19f6a713f1546e6e092a59d6bb28c59f82e2212d394cfe10fac0adbac1c080d1033f0209549af939922c29982e6e6d0c6288dfdc917251302aff315f57d330657d6059d620323f2a605b32554a884648fa53c30c4c19aa11df7dcf23ea500cb743e9b5b69818c5010df9a08025295dd0f6b189560e4828e4fee9030b42960140112bb242c1bceb29179a8cff2fdeebc34163fd1a9c63102d8825b376f3a8b88e49f9aedac044a63b959c30e6dd1906a872230d21c783860fa848b50f79a50109b05a9848ad569632620603a10ce6e0c3bc22d0bf7b8dd5585fb0da19d916d9ac2ed4fa9bc0b876760cd9ccf1ceeecc9890815febaaebf6be59ddc94f67ed3aff008990b41708202cf4af11df2efd477359f102941f86016f0ecbf7f1c479ecae91d94c9445af35fe6d00fd5fc9c41ed7fbdf9d47d0fd561616ee0d9815c1b3cdc5350404f359db88e997a6f52077404d93a31453e7ee88c03c97c57fd63162b7b8830b4701ba49e6237c4ac194d72988611a13807b17761aa274eb220a9212b34f604e07fc4a331e8a3d38302c93c8151d6e754f9dab017ebc418789747c2a16f3357d9e555b2ccf90f375b1c87699c03ecb6ca5c84d08b1c0e4b38791678df0a73e6f503123c51f031e8671340060742cddcd67fc1f3e2ea50edb562333af05fa42c190995ba29ebac5e112d928bbd9e4cde0f56c8f91269d021d9a321e22f81d28dc1e29a685dcdfe4a9ae9833815becab812428981662016f9fca039609da5f1bdc5494dcece2ef6c99b7409100d3569cd7d13a0859ba6bb8167bf9ac3a6192bf3d7401c3fb8aa55b9e6128c88dc3ce21626281f5bc593959562fa0c86927d933d97e002c10574d91f3c341dce4fb9027ee357875d315d3d7edbf5205e51a6097c2e255df195bf272a87e575bfbdc9fb86e684bb12057bcca555c59bbad142d15f5375ab32b22f81f70fcc817e43e2691299c3a1ea0a9f1d4f5a6c450cf6bb4d2311344695ad129fa68447ee5b25210167fd30189f31e53e51334360f5ea7b8378532a9874896af39740a480edbf083e440e8468f147a8fc1182810b2d2613915816c736459a550857f13714a47225f4acc9c0deabe3797c414a32f333ab34d01544c0150fbb096f9540f5c1e89ede0ea6647c8d89299583e80c8c6599c2c94f7f46ae8598bae41cfc6242c5fbdc3fc376c5713f90f3b5b5d7bc791e740c4d9a1b6c2b362722b6aebb31c61bdcf32dc454328efb945811b1cbc1837a3ff8e72c1940772ff1ae457c39111077cdb05a0de46d5200f00e80383a7bcb304a28a95e3d9d383e39f5c987516a5ba20c7ce407de86854ec3321fdae51ae7b9f811de075b284010306330d92f13cb3ccb1d3ed75105364f19a55f5cf92c560088323529993967e871f7966d32f5db3d3aa1ab2b2ae52135d0d9ac881063ebedec5f3191781e36bde92d45052a67dde2725bb8c1feebbef11688909765f9d8ef53a2c8e3070824268f3db3e4edc58d605ade69e648484e3d0ceaf89fa01de6a4b2c7c22f6638449be7966af01f1f17b2d3f3b2aa178e989e37820ac4c888661b4f53161e79a15b1bbfbe730da71d90d7b8c6789094d44e06eedba68280a504ed05583d2a32ddbbff4af8d7c14b36a7bfca6fb333d22492867fb0269ea3036225fd69098239bff063bcb2fb407eed51a2540a410443e2d9a15b946d5a1814fd056eb3b47329506019252b6afbdb28174725f87d576a9a8d94c9edb616977b36773c26374b4b7b60a14c770e4bf6b6cb8fdd1e47fd4b00f0af0d1acfb2a69230646b944cc1177f5e7168b255541ad3ff8fbdae58702f3d30302a47ea72cb5988372e14bc02551fc6c8d673726945f935a9dd058b458d94e4eacee0d02dda0790a62a923608f3d63ca7f0272ec55cd3949a05164ce3bd4cccc846864216210581ca83141e632260224cb4ba3140e462436f6c62438b64f2303080f61ea1cd0fce4794d65ba0f9baa01c4e390fc0fac9fdb47e79c30903d968d710245dccf843b7631f1b0988f314402e8e29828565705c5930c9570502791c918fe847246b614f6018b70b5752ab3f85bd6574d5c8d4e48af42b810dc74fe8f4b3d877903e39d1a6d9b1d54e8f7f8d6b4499e584cacdcd07451a5dbe883e0ecb9dcbfc561fcaefd82beca1423b160e6ac7907a8aec6ecc1b08f4b08d6ff3eccb7463073b0547d8e008aedd1122c0359936d44aa5472e2dba147eb41417ca34e22af12ad97613081ab7e9217ebca0ef3d4ed5ab023d6142ebf066ea13dd0b1a3d00341fb246b7d8629fa8094250fcb801faca16910ff009838ebd964efd45513a38172a8ebeb5dedf339035f2d4303c8e9e697bf0a8ad87df8a5cc7ffe6f44024ddb1658cce9d0a740ef1dc8741801fef57ef524071a5bd4706764394335d2f5401f8ff98e408c9f03b895badb167e96d90b5ffd43d858dc8056075c3ab83af6a058ca72e9cba71100f4434455d2f0831d6420271636c9f36099c8c7c415aeb04374423d61f577ace276baa56cf5c976a7820cd6f8c8b2016f946d56256c74e2f76b4bb9a6237614c4c0f3f40d37a959ede829fbdb67727cf4f79e7191f8b523f95a145f280ad793de6ca2ee582d137a1b92bed92ad93063f02feacbbe989f2e29bcae31b4e2499091ee6801d8e2842d900f317ffe8f4b7f893831f7833936819925cf5dd5115619123d62ec5e0e9c7c5671c834742308b48fce50320b72eb078eb2b16dd3f7658c74eca5afbb21c920b2fa63b0f5fb772e21eda04a59fe848fd63e6018143ccf2b282fcaf91ece66adc98c755a965d1b61feaa5ed117d6ce11c80484ad2e6485dfc73618cea4564104cd4305b40a14482682b58ce0d77b15299c8d6bc7420df8efa40dcf20d8a78a2f7a61d3308513a73c240d9fe840cbf30a052242495838bf0a7b7cc084fa55deefed15a9e6b471590e0ee39d001b6b4d9310e645f6519e4e5c17db93f22b1cae0241b20bea763af7848d0f784d2e46a01735fd05f7491826405f7ae9acbc82b17164c1f1f57d4570a6905b90076365a2b523cf22ec9ebf7880ac81cdc162e1e8e567005fe07e48f2341c2969ee1f3bfa7ee25970c8fcf8e6ccece91503ad70d7fa5c5faade243578c15a5f40b7bee6b3bcee143821c4276a11516f4448fc24678544417078a7dba8e7280fa00126b549ed6812a7b89b8987f6c43a14c434e9cb2508e4b4e114aac3322bf434f79c3ec02738d576f3d8fe9c0de560693b867e3240d44b28fbb740b8666f1670646eacd7589dc4a7edbc78b598f85111320d4fb2f395f059d00a45781480bafde3fc0c9c86cda282795e3bf9263a64da702fe60799b04ce12eaf22f84c3a54139b8f80fdb39ca282142a4fed360ec33bb5839ece34c99ab97d92da3ea49a5ad6f3cf6c6fb41093c2e82d16e7922cea1e58b7210ffd6e72ee5fb9cca4c8ac31a6474b4d0a169126155f57f4c46276a3ff8303f323c8f2cb4bfbb7622952c136db275c9f6a9bc4919843e764319921aa8c8220ed78a49c1abf7ef877304d24887fac96ab2fbf81468054db82d2a59dae10a60ab6f1d2aa00b1ad86a0f50fbc51ee525158e36708b13dd976ae8d3ede35455bb329641848050cf8c6801f1a71db9ba1a7d3ad193e5a491e98d5c018348e49a6e78b159cbe7409ade051f8dcae05dede7cd00f62c2b34a8b7b766074f9b2940cdf600de533ac8d832968915a858228031cee5f68d145f09580e66bc930e76d2b8457ea498c7615eb7baa97f612cc1e0c202776fb45649694f2ee68670671d55f50614344f7c56a495004052cbf88829fad071d8d37be32849d616425ca75659422d1625fe3458f3d28bc5582a3be689ced9ec5f3d995a78d6e7a47fade180cce9d88da04ac4f2aefa658a23d785ec49c3455ad691c3ebdb88876dbb1511ca946688b0087e05bc9b45d3b291e0470a8b736a20390ce45a378e02b99e10cfdade37099ddd4f993a4e306d0a2ba2049bd0a0c5e7382528cabca6a979d7753c1b7d2e431372076135e834d447d9450b300cc7ef2fc6faadb6a45703e9867d980453b9feef8b538b8baaabfe51b982f5e7a09cd2adb395b2ff36344ac0ef41e544cb6db8f07e8ea4d2d65bf2c5bbca73b062dc6395ebacaa82b910f8a73f6e7acd3e7768eae2ea6befcebe5b184c3162cf88d72489a82c6cc7eeed54ffd1bedc1d8abfc41d44b88b310e1660ccc810dc1b667d7eec1a140f07ae4f4063accda76a69b48ad16320a368910ceb2e66fe12c6d0d38099c45ddb4ed7a2a77bb78040ba337888fd4f4c427704370a2eb14508d6af397a64b9be3b5ec822c30b1d1b9057c7fa4b5646c0197a845455a6a91db996136a36dd920297619d73eb2131c8ef212f775cd83426332b41c8ac1888e05c118c01e00b2d42f3e9625113df8fe76ab7971767c8bfff3c879b23f9e503e9f2a3d199153e80e3238578c1c7e1aae1a1096d0d2f022e9fff284d805bb8d6d21713d9b5b269e0c93dc0a857771a751f3d4cd241a59fbf82368598f275f445c23757eabae2db7052ff4179167741d71ba45aa466d0866b78337796f2f8fd635a99d82a0e5fcaa555634aaed07ebac8d6eb3b4b7e5ab9ef38e8860b55cdabb1781243bf4ec3bba80bd3d664b9cb4f05575fb522c299d20c19695477a24501e2ac3cdccbf076f87004b65a1944c2e077ddda022252aacd78d547ff49290c943eac97a7c6a5285c347db8b401eecc6b490602fc3eeeabc8d3ef1301ee7f018389d61c20982c234d54cf69ef052cd85980893f1b9ba261405e94fc1c28f34732dff8480c17d53e5996787c6ac1f2c4596b26f8f913268fb0a9e58868dd5d3d589973a810bf421cbaac2b213a6aea32135a4e5e2b0cdd6e8038cfe9d8cf9896932a9ed03aa8c48d8513b5b8cbddb679f24e9fb4741c722138856b70882c72e138acf049156c2446c1efc48da751c74b5f841b16fe305125cdc438872c6ec19b2767eee84c92bd76df96d7d6a17a9afacc0103a69f657be2e5fcc61b23a82889661e393422652f774754e9450509d0936db6830e0512fed2761a0e3a7d135176135a34d8ab174a9e60d25df9e1f932f2390cbc74b03729dd014a88548bd9ecc228d56f0d6d897e1fd2defc53085aa0896e34f0b8bab83c64e236f3b4a93d0f0dab7644fbc7546515a6ae4ee29d7185b4b94c8519446106158013b5d6aeeaea88087d80261949161209d73ae3434424977db009878502e4a323f8fb3f8e7bea923d338baa7886c73f8f813eb4516e68cbde06f7debeaa5522235ff92a155a62ea2fd2590da16a79ee160cbad2d8ef6b8dc22c8d03ae143316a298649dda98cfd3b9c6a64ed695414f06c7c238e9b91c0825893c43fad7545041e3362f8ee56d5702c4957ea8696a8f5bc336afb353c9e6b36502101bac57c1794483ce5c7b5a056dc2ac44c0566e51dd16b7adf84f7ac22c4e39f5d918cb02ee1ff5150d1a280605bdfc1830db780a6539975474c0210892450819fa81de9708ec2469705c3826a37dc3b9cb5401f677d03346b0b71a68a72dfc378b3bce75b4cdeaafe096c8da6136691c685ca811f2b255311a03cc283dde39de992fab3baed762e3774276bb47ee4bd7b6579c6ca330c5d19254a58660145e2e6dcf2eeebb84631be7cce21a7eb60dd09f4fc0a7c7cc5bf9e95c70ed080e1511b4dd69ee75ba3434a0bdd5d418b9739d833c6a0a1ccf7d5d6082a4d695dbcb5f29fa0e74e57a97aee802fd759e19712ec26be82d22221a8edc31ca32281f15817f7f67d82c85ac9b0d564a901259f0e170be457b85b05c3aadd502e466ded0391c90248aec34a22a41cb9c642415c24bb63af3461b17adf81a1c9c90e994e019f7e327b2c9372902d9a75b8741331f5e74f151d1c162fa02026488938037612888ed185b3f1617b7f030ec816299087eec603186c2db12f82a7bdcd1f184e1ab4b3bef8a0810d545d55bf21297c7ab869d12eb28896d33f81ef6cc3349240ca0e5949c777c55bba32564c0d9159c74454b681bbd1a505d2b1ae6db4a79974e595e55a2a818f7e47c4f600979d51528d8f7cb678dc038200408f5dd07a57cc849873d964f824927ceb2ab8c72ebaf423018369788ce163c9eec26274bc06402a81749ac9533f1924346819f08d20bf2664deb32b0a6125e42286b982adef4a0a5ab5dc633d630589e4e6c8335182f92f98539f8bf11b974616e2dfe8a754078812caa15d91c945293101d44cb3418e8cc3d346b7a629ef626332ebc4746f7258d5ee2863ac767a315c841f87e03a893d74b45915997810cd4221e573eb2ad4a83941c4654725457795bb903b15cf57c7dd6db377eb26a9fb89a3f35d537318da1196ac34f648e00617f8982c7cc853d8f77ced24d67832acba27b6385a91d10e44dbe8da937895b823688d49573c04d9b1c0b560247693b5c5972bacdb22a73ed9a64d476e19cb30c4d05c0adaccd8f9738736e9848d43b5e7e7ec0ca4f6e3e45ec6abdade29a16a6a308ec2a9659787affc8aa7b6c37388ede001983d0b9c58ebe79274908815c958ca0c8d3e39b3bce56d9936681fe5b2330faaae9880089cc44a06caf5537b7870e749b8bc0a072542198469f836499e768997f978dff078b1edf38e7544aa3437b9fc0c5aa6b1673e1aa7a348ccc0df9d59cd7a135047a9d372d8f4750f6174d0d8af105274e310c474735b6ff6fb22473241d3c2ea124b3eb949a1f462dd0051b28d3d94f847cf3cb19905f87d94a35e4d9f8c573be5616735b9c3939793c89052d14faaa250e001ada4d20b37c090bf3cada8eec456ff84f0c6b373278de040b0e1cd21de9df6cb2b55af1c0803e62c3ec3666ad0f809ba2c99ef65d459ecea7e0e003e41b04b0125b177eb45d494b1000f33a1d1bc4fab14bc95581874f22f8c6385fa2b51fa216120f2aa16fef91b93843fb35b1bf0dd432006dc37b65845e9c9001169411fcf2a1f38cf99305568eb043301e60db18b9068f3daa8b958c58e9ec782f3dc371abe0efb38eac9c917c06ac87bd8f321e69cbeeddd10047e1e1c74ee07e421d91290b74d966bf67c775095c69cb3c07cab37039e14dabe457cf3c71fb49a4211072c6dcdaa9c82b98b6f7c621e2dfb6ba143c856c698065188c57a3d263aab39e71f4e866936ca53643e46018e05b46e5fb507405f071811fbc589ba7457c7c6b289ac6494f91ff23d070a2926f4a4e7cbb1893f963c76e5f92ed0a6b83d773961a7e5cdd6cbaac4c83390e566755dff742d234accec8d0cb1f4f71f290e06ba1348811d25ed314a19f32f505f67df07a55020daa6f3a621f08c1022d0fcc6089b39b22e8d50784f0ae0e718fa8cd8a880299a4a34bf2759e5562f62501a8ff1691672e372a00473748f58b445fd04f37497f9ea6312d7fd4b90ccdaf11ceed445baea357286233bacd6a53c83c40fa921bc63644be119d6076de81d02f0a687e5e129516e969c1c6da742d7877337205da241f028e71e356b0dd4c31bf835c22e24ca386257adcecce1ee40bb9b50f2bb6ff0e01a031916cc3909d5de7bedb58818e1cbe6ef1c1cabec51937746e3dcadea788498cb53271ed847fac1adc2145f4b8bedfa8a2a6c4c7adbb587a44b4c87718e42a5dd1a9cefbc5fdb3946fb33a479cab18f4385623153f2e3c809220c63885e8e75da9b5f857c5680aded5651492fa37d90c44481835
+  dwSignLen          : 00000040 - 64
+  pbSign             : fca1ff7f79d764c4626aff6e9392253970ce2718b3928574fab0da604cace2a10e095ebfbb2e5078f9238a712f39b59464cbc05d2e4757110eb4bca150e81cac
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 00002a56 - 10838
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000001 - 1 - generic
+  Flags          : 00000000 - 0
+  LastWritten    : 6/19/2024 9:31:58 AM
+  unkFlagsOrSize : 00000000 - 0
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000020 - 32
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : WindowsLive:target=virtualapp/didlogical
+  UnkData        : (null)
+  Comment        : PersistedCredential
+  TargetAlias    : (null)
+  UserName       : 02iyqhxbnbcyaokd
+  CredentialBlob : 
+  Attributes     : 32
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:0
+    Value   : 01 00 00 00 d0 8c 9d df 01 15 d1 11 8c 7a 00 c0 4f c2 97 eb 01 00 00 00 e9 52 28 fd 13 38 72 41 ac 67 2e 38 80 b3 34 99 00 00 00 00 02 00 00 00 00 00 10 66 00 00 00 01 00 00 20 00 00 00 96 40 b1 b9 bc 58 8a 60 57 0b 9b be 6e 38 00 0c 4c 77 1e 55 c3 75 69 1d ad 97 dc b0 3c 15 1a 8d 00 00 00 00 0e 80 00 00 00 02 00 00 20 00 00 00 b5 36 3c 9c 9f b0 9f 0d 5c 17 aa a2 22 e8 a9 6c 20 3c 1d 75 f3 dd ab c0 4e a6 0a 1b 66 5c af 87 70 1e 00 00 74 4f 99 f3 31 1a c9 ee ca cb 31 82 ea 68 d8 a9 ac d1 89 38 02 26 ce b8 44 97 a2 e5 4e f3 f2 03 15 6e 04 e7 f1 56 3f 42 6f 17 b3 54 05 b2 bd 9d 9d 4a d6 fe 0b c4 dd 4e e8 77 fd 7b 79 70 65 b8 44 a3 d1 db d0 0f c9 8a eb 92 4c 20 ef 8f 1e 0e f6 b4 00 93 c6 a2 3a 4b 59 3b 1a 10 5b c1 30 6f ca c4 45 b0 20 dc a5 4b 59 62 03 41 58 d0 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:1
+    Value   : 39 80 68 ea f6 65 73 9c 42 71 13 19 6f 54 9b 82 6b d0 d3 53 0d fd d9 d2 2a 78 fb d0 79 7b 37 39 dd 12 16 fc b9 8d f2 6a 91 cb 5c cc 24 4f ae ac d0 37 30 d1 65 74 f4 4d ea 30 63 c0 35 a6 0f 6f 7f 31 fd 4d a3 84 2e 4b a7 b8 3d f7 cc 18 a5 b9 47 25 5b 44 3b a6 d5 0c 1d 02 24 6f a4 c9 ca 6b 68 78 c8 c5 c4 06 01 14 60 6e d7 0d d2 06 90 8e 1b 5d f2 63 bc 9c 37 ff 64 de df 85 59 a3 5b 92 c5 75 4f 15 98 d8 89 d0 63 cd a2 a1 bb fc 76 aa e7 c0 f5 e0 38 09 40 8b 6f 9e 3f 28 de 66 3f fe 0b aa 72 1b 4d 25 4d 96 60 22 66 7d e4 5b 6c 26 9a b1 43 d5 4f b6 eb 96 06 01 ca ee ac 02 19 9b ce 22 27 0a 0d 69 48 9c db a9 0d 8a 61 84 3e f0 01 2f 7d 24 02 16 d3 9e 09 23 72 f4 bb 82 f9 58 14 06 64 f1 06 1a 58 31 99 e5 1e 10 18 7b 9a fc 5d 01 be 7e 07 22 7d f7 0c c6 31 b6 67 c3 4c 4a 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:2
+    Value   : 40 ef 32 0a 01 8a af 93 3f 0d f8 63 6c 80 56 b1 20 e6 17 a6 c9 dd 13 02 85 e9 2b c9 a7 fd 3e 01 f3 a0 29 3c e8 b8 cc bb 50 b6 c7 76 12 74 e8 b2 2e e7 96 f5 5e 13 20 fe 03 5b b0 f2 5a e1 b8 be 57 44 e7 a4 cf 3e 15 01 d0 b3 be 8a a2 25 97 b8 01 ec 17 9a 3c a1 00 22 79 b5 9f 37 45 d0 f7 89 5d 93 90 15 12 0f ea da a8 af 7e 57 7d 92 da 48 03 a3 d6 cb 8a 8b 78 5e 6a 8f 60 07 99 4b 57 b0 c8 e6 06 a9 95 cc 48 1f 0b c5 fe 56 e2 2b 0a 6a 02 cb 91 54 de c9 e8 2a a4 f3 78 a4 77 dd cb 86 01 4b 16 96 69 7c 58 01 ee 20 d6 fc c4 4f 3e 20 a1 18 14 d6 77 87 c6 87 35 48 70 91 73 f7 15 c1 00 65 ab fe 93 a5 83 42 d6 9c 77 c6 f5 2d fc 26 58 2d cd b3 fd 89 9d 96 fd af c4 2d fe 2e e7 4b 76 c2 66 45 c1 1d 26 9a a1 21 de a1 24 5f 78 39 d4 94 e6 6c 46 f1 1f 6c a5 ea 8b b4 6b 57 f5 a1 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:3
+    Value   : 46 a8 a4 6d 6a e7 20 a2 1a b1 d6 62 d0 b8 66 43 d4 4e 5a d1 56 dd 9a 27 58 27 cd 23 5d 3c fe e8 53 e4 9c c2 c6 3f 0a 8c 75 a6 80 72 72 43 e0 88 8d 65 51 54 77 86 ae 56 1b a2 b4 1a 2e 54 6e 52 a0 19 48 11 f1 8c db 43 06 7a 9a d0 78 6b 89 d0 20 95 d8 71 b9 af 9b 7b 17 cb 63 68 c6 d2 ff f1 b1 82 3d 93 85 5d fe a0 9c b7 69 f7 b0 57 10 d5 f0 fc c1 4f b7 42 c5 ce bb 03 36 73 c0 7d 7a e6 cd 11 e2 a1 9b 53 e5 e8 33 53 16 00 a0 b5 64 11 19 2f 6c 5f ed 4b 87 2d ac 2f ab 96 ad 6c 78 ff 06 5b 5a 85 18 91 d8 5c c6 68 4f 68 7f 09 a0 b9 54 2a 57 50 29 44 d6 46 9d 5a 36 65 1b ae 90 6e 2e f5 b6 2f 40 37 9b 85 6c fc 56 22 a6 7f 01 e5 5a f7 6a 70 42 d8 5f 62 9b 66 60 7a 34 8d 2a f8 38 33 97 50 2d 52 37 22 7d 0a f9 52 68 32 22 c7 a1 3c e2 fd 00 9f cb aa 0b aa bb 73 16 c0 45 34 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:4
+    Value   : c2 a2 59 19 2e a9 68 52 ae c0 f3 0b fc 87 dc 7f 72 05 a2 48 e5 b1 1d 35 43 21 46 55 f3 67 0a 14 5f 1f 02 71 2c 6f aa f5 44 52 be bb 36 27 0b 33 08 5a 3b ea f4 25 fc b7 c7 84 b9 26 75 9a 89 8f ce c2 01 5c b3 ec c8 df 9d 63 4f b4 07 be 36 be 55 fa f8 3b 00 ae f5 b6 95 8c d7 c9 da c6 6f 02 62 20 1e 81 d4 fa 2b 25 ae 9b 71 3c 5c e8 b0 63 11 62 ca 48 c1 eb 56 2c af 6e b4 ed e7 e1 61 5e 50 1a 59 92 51 1d 08 26 6e a4 3d d5 fa 81 07 da 74 c6 f7 d9 f7 6a b6 c0 27 7f 7d a2 56 c2 f2 7c e5 5a 0e a4 ef e7 d2 40 a1 77 0a fb 29 a4 26 e6 a1 b2 8f 77 a3 fb d4 f3 f8 2f cd f2 fe 18 f7 bd 29 9d c7 2d 68 a8 b8 25 ca 49 23 51 f3 dd 7e 3a dd c8 74 a3 b0 c5 58 85 45 41 19 60 35 8e bb 2b 0d a9 98 c8 36 d5 48 d2 54 70 63 d2 b9 ed c4 7a 87 ea 05 53 ea f0 b8 1d 0c 5d e5 e8 5c 6c ce 7d 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:5
+    Value   : ae 04 73 03 bf e6 51 4e 22 a9 3b cc 56 7a ef c6 54 3e 62 26 28 00 59 f6 6f ae 39 62 f0 37 9d 86 79 e5 e7 84 da 7e 31 6b 1e 94 17 1f 7a 13 20 a2 b1 f4 bf 0e ff 08 63 7e a4 da 8b 4f f2 d1 cc ad 81 90 ec 4c b3 7e 81 6a 08 6f ef 4b 9b 55 ca 38 41 23 f2 04 e7 17 97 28 46 f7 bd 59 b2 ba 5c a4 75 38 62 42 07 61 10 32 84 04 82 22 b9 25 ef 23 0c 23 13 68 57 4f 4f 0c 2c d7 f0 82 a6 70 5f a4 1e 9e 48 9d c4 58 03 e9 a8 fd ba 0d a8 e2 c8 39 ac fa a4 56 a8 63 f4 4c f7 ba ef 02 60 76 72 fa e4 9a d8 1a e9 91 f1 83 67 a8 15 f4 fe 4c cc 03 6c d2 fe 8f 3d a6 cc 06 2a 74 f7 6d 0b 97 1d 63 e0 08 6a d8 d0 93 f2 7e ce 17 28 95 9c 38 1b 19 2d 99 ef 2f fc b0 f6 8e 95 68 8f 13 cf 0b 03 0d 44 ab d1 e2 78 47 42 7f 57 ba 0e 8d 26 12 d8 2a 36 df 52 de cf 82 3e d5 2b b2 2f 76 5f 85 6c 10 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:6
+    Value   : b4 3c 9c 9a 2f 49 e0 c5 67 4d b4 38 ee 70 3d ec 23 b3 2b bd d3 3a fa 3e a6 89 29 08 f6 37 9a 00 21 ae b0 17 25 23 a4 7e 0b f9 f8 f6 a8 51 c1 0d 8c be e4 0e e7 32 38 65 7b fb 96 81 78 aa 67 cc 23 02 5b d8 b6 5f 60 28 b5 0c 18 83 55 3b c5 e5 59 e8 09 c1 00 9f 11 4d b6 5a 64 38 08 c1 69 9d 8c 6c e8 d5 15 ef 65 eb b2 e5 04 c2 ed fc 5c 88 cb fa 9c e7 09 de 0d 70 74 1f 1b 38 39 47 4c 2f b8 fe 43 2f af ce fd 40 33 2c 7d 78 ea 0d f6 b9 00 85 2a 31 17 8f d0 b1 99 0d 2d 70 19 d6 fb 0c 34 f0 b3 f7 70 91 71 ca 39 6d 7b 46 3c c2 4f fc 11 a3 aa e8 ae d0 f5 26 a8 4e 3b f7 01 54 94 71 e0 70 eb dd cc 70 6b f5 48 af 30 91 cd 08 8b e1 21 c1 e3 46 25 33 9e d7 11 93 a3 65 c0 db 20 be 56 4a 8b 65 f3 29 ba 59 cd e4 0c 3b 6c 7b 2a 61 88 4c 79 c0 d9 cb f8 e4 fb 68 e9 85 4c 00 16 79 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:7
+    Value   : 83 ff b9 4b ef 78 2b fc 16 c6 d7 54 ea af 7d 72 e8 d3 00 23 d6 7f 06 37 c7 a1 7c 2d fd 9a 19 cd 53 93 09 19 47 dc e2 de 4d c5 97 85 56 64 8f 7c 23 7e a0 da 41 12 16 72 47 b6 1b 8e ff 5d cd ca 8c 55 35 a7 44 0a e5 32 5f b0 f7 70 24 d2 38 5d 40 f4 2e 51 ff 02 41 47 33 7a ae 4a 70 9c a3 0a 5a 5b 39 ae 06 8f 37 53 be 85 22 70 60 75 bc 64 b6 8e 38 fe 9c 1b 5b c2 f1 8c de 2b f1 5e 1f 3d bb 45 9a c6 25 fc b7 11 8e ed 64 72 6a 61 b0 cf 09 33 49 ae 4f b1 06 35 fb 54 4b ce 84 58 d0 81 0e 37 30 90 40 14 a7 03 0f 09 df 3f 1a 05 46 d7 0a 19 f9 79 36 d9 ce 99 98 39 a7 c5 bf 4b eb c3 db e5 a0 50 a7 05 24 d6 86 f2 99 4e b5 3f ca e1 71 86 cb 3c 9b aa 6b 64 d4 e9 ed 09 52 3a 46 77 b2 0a 5a 78 b8 d0 c1 29 0c 53 ad 3f 72 b3 45 e0 c0 ab 58 e6 de 77 5b 14 89 c6 cd 95 64 ad 44 0b 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:8
+    Value   : df 6e 40 a5 66 5e 4b 39 cf 96 68 d1 53 a3 95 c2 b6 2c f5 b3 be 11 0b 1b a8 cd 6c 5b f6 eb d1 95 98 d6 f5 ae da 3d 34 8a d7 97 ab 0d 47 90 a9 ca 10 67 2b 0a 33 03 3c d9 f4 df 0d 2f 40 f4 50 c3 f5 c8 3d 2a 47 71 eb 84 d4 9c e9 79 64 06 17 16 4c 4c cd 76 1c 41 6d 01 8b 6a cc 56 c1 36 cd 7c 6a 5a ff a8 17 7b 39 d6 3c 94 bb 71 e0 e5 2b 9a c9 28 a9 b2 94 3a 6f a1 83 cd 7c 6b 2d f5 20 ea 06 c6 01 4b 71 33 7b 14 dd e2 24 16 af 10 f1 5e 6b a1 27 2c ce 45 c3 74 9d 6b 2d f6 e3 16 8b a2 cf d3 dd 1c 45 b6 81 5c 41 d8 dc 95 ed a7 77 5a bc 2c 3a 94 93 1a af ef fb de 85 1d e3 d6 fa c1 cb 16 f0 fe 8b 15 46 5f b9 15 5c bc 88 8f 1e 77 f7 4b 51 83 e5 da b6 09 10 df 9c 17 bd a5 cb 64 da f5 82 f2 f4 57 9f f1 c7 c4 0c 62 9d fd a8 93 fa 51 b0 75 61 7b f1 ba 00 42 78 9b 61 3b 8b 85 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:9
+    Value   : 2f c5 ae be ec 53 f4 7c 7d 9a 32 d7 c3 2b fb 94 bd 95 c9 4c 57 4e 79 f9 09 51 c4 63 ab 56 f7 9e 26 f1 4d a7 1b 40 2e 7f 81 60 d0 96 af f1 42 64 7f e2 da 9f 72 65 97 be d3 ff 45 6b 85 68 4d 83 fc 5d 2a d9 5c 4c 2f 6e 88 b8 fa da 80 a4 8b 83 d7 5a fd 8c 50 ed 91 5b 1a 0f e5 93 50 8b 9a 84 d5 e1 92 77 26 c6 33 4b 52 6b b3 f8 31 bb f3 39 5b 5e f2 3b 7c fd f5 4a 2a 7f be 6f 2d fa 38 e6 09 90 7e 6a dd 5f 81 fb 1f 76 96 80 85 40 ce f3 7a 13 1a ff cd 93 86 c9 eb 1a 99 fe d6 df 4a e5 a3 37 5f de dd d7 61 6f 07 aa 93 8f 25 87 ce 66 f8 b1 17 b1 f8 5c 6e a9 25 f0 67 02 a7 b6 da 6d da 9c 58 25 58 12 22 4a c1 01 ab aa 04 b7 c8 03 b2 66 84 74 aa 6a 36 84 0a 24 aa 2f f3 fc e4 3b 62 53 06 45 b3 0a 4b 71 c1 b7 e7 a7 7f 46 4b ea a2 5d 15 98 48 79 cb c4 37 e2 02 59 a0 52 9d f5 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:10
+    Value   : 3a 76 04 85 4d 93 9b b0 f4 7c df c3 4f 97 c7 35 31 72 f8 c7 d9 0e 57 b0 e9 5e 9e ea d0 83 a5 8f e7 3d 30 f4 79 6e 8a e3 06 19 82 40 4b 21 de 44 25 b4 cc 45 f9 b2 5e 5d f9 9b f2 60 3b 4d 01 f3 f8 24 fd 9c eb 46 a8 ae 33 75 92 ee bd fa bf 13 f7 eb 02 50 37 ac 44 f9 7a 8a 38 f7 b5 9e 3e ba a5 fd 7b 20 1e 85 66 99 53 dc 7b c1 68 67 9c b3 63 1f cf 00 a2 19 03 cc 01 ba 79 18 ab 5e 29 be b3 a1 47 f6 5e 31 37 f5 eb 71 e2 8b aa 3b 4b 78 f0 87 8a 0d eb fe 24 ae 4d e7 e9 54 5d 15 1c 71 e9 e1 21 40 37 f7 bf c0 e9 6d 74 a9 f5 33 ba 73 23 f3 36 88 e7 48 9f 95 53 e5 bf a8 1a 85 c3 da f4 3c 55 ad 68 91 95 5b 50 39 2a 76 61 42 16 78 10 c5 51 92 09 ae 8f fb 1c 30 39 d1 a3 da 5f 58 bf c0 8d df be 29 a4 49 75 6a 85 9d 6a 57 06 78 e3 f3 3b c5 ac bc 02 a0 17 04 53 00 59 f8 85 9c 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:11
+    Value   : 08 66 e1 08 4c 62 e3 b7 5a cb 2a 7f 8c ea 63 42 03 80 9d 93 df 94 b2 78 61 7d 42 1c 93 03 cd 25 e8 14 94 58 91 53 9d 86 d7 0f a0 d8 1c 2b c1 2b 04 ea b4 79 ab d8 02 20 08 a3 d1 ad d8 b9 9e 0b c4 db 17 fa 32 93 bb bb 9d 30 61 8d c9 5d 04 ee b7 c5 f5 7d 53 dc 30 94 e3 43 71 dd 53 a2 51 3c ac 23 96 8d 43 e2 51 59 cd 02 87 b7 48 25 7f c8 b8 41 a3 c8 38 43 b9 8c 4d 81 5f a0 df e5 d4 21 5c 9c 8e ae 35 46 64 93 63 ed 1f c6 27 8f 8f 82 73 7a 02 42 62 76 30 fb e2 2e 69 34 b5 ca e8 0b 63 dc 6a 23 05 72 a3 e9 f8 b0 ba 8c 0f be ef 10 d9 6a 6d b0 51 5d 70 4d 0d 45 08 a7 dd 32 98 0f 1b 62 07 d2 30 88 f4 aa dd dc 1d 96 fc ad f5 79 b4 af c4 0e 36 86 d2 59 1a da 59 37 28 86 36 07 87 ba eb f2 50 61 f3 0a 00 9e af f1 42 06 3b 6f 4d 97 af c4 50 6c fa 4e 3d df af 0e c9 71 6f 7a 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:12
+    Value   : ba 36 5f de 10 00 89 75 9f 1a 28 73 e1 43 75 4d 98 1d fc 0d a1 a2 b5 32 9e b0 86 22 8a 76 6c a6 e2 b5 f3 27 cc 07 bf 1f 43 60 6d d8 77 25 61 35 76 df 27 28 18 0a 0b 04 7c 7d 05 22 3c da 1d 26 81 0c 65 ad 15 55 1d 48 47 88 b4 47 d4 7f 3f fe f5 89 65 fb 04 fa 58 12 96 5c d1 78 76 8b 95 23 cd 8e db 64 7f 5c 2f d9 8f 4c d3 12 82 79 d1 d3 90 78 2e 37 a3 df 00 5c 11 d7 68 10 7f 6a 41 d3 86 33 37 d1 1a 7f 33 f7 d1 b0 c1 9b 6c 6e 33 07 24 ec a1 85 08 bf f0 44 56 b7 2f 3f 56 bb 44 5c c1 84 33 b0 a5 07 6a 57 dc e2 9f 07 9c 2c a4 e4 e2 bb d4 b4 e1 a0 5a 5c 00 b3 bc aa 80 4f 47 70 b0 bd a5 be 34 f5 b3 d5 b1 5b 58 44 2f 1d 73 1b fb d7 82 7e b0 0e c0 1c d1 aa 73 0c 3e 29 cf 44 76 41 49 80 85 5b 71 b9 42 43 ef 34 b6 b4 b3 6f 09 6b b7 99 85 75 0e 95 0d 0e 22 7a 29 58 a8 62 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:13
+    Value   : 71 68 54 44 90 37 2f 87 84 df 01 c5 b7 fc fa a9 11 21 0b 9d c4 ce dc 04 4d 4b 85 60 14 ac 6f b9 f2 c3 31 91 87 96 10 2f f2 a0 e0 d7 12 6a 2c fd 78 22 aa 58 36 39 51 78 57 a0 9e 03 2a 3b f4 74 2d 37 b3 a7 7c 46 51 5a f4 fa 19 be ef 46 48 11 7c 19 aa 82 49 aa 3b 83 be 46 27 cf 4b 1a 0e 1f 54 da 51 6e 3d c1 54 42 5b 02 81 e9 50 de ff 13 20 ab e2 ec 1f 20 87 ee 83 5c 3d 64 1f ee b1 f0 76 73 44 02 fd 5a b4 fe 54 ec d3 b6 2f 20 70 a1 3d 28 29 23 38 04 6a bc 47 be 9f 45 0f 5e 98 ef fb a0 d7 cc 30 50 e6 40 ca fa 3e 63 3b e4 79 65 df 5e 56 22 24 3d b8 2f 72 2e 77 a9 48 1b a7 9c f5 8b c0 f1 21 8e 28 55 30 92 6a 32 43 13 cb f8 3e 85 c9 d4 1f be bb 6d 5b 82 bd ae 78 50 6a 3d dc ee 62 96 a0 f7 2c da eb 99 37 2f 56 94 cf 7a c9 4d 0c ed f1 f1 18 9f 4f ba fd 7f 9b be bc d0 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:14
+    Value   : 80 9e 08 e8 e3 d9 a7 fc 07 4e 24 ce d1 3d a9 e4 96 43 5d 48 d5 84 71 2c 80 d6 f5 61 ff 9a 91 fe 26 46 93 90 50 e2 ee 61 08 ce e0 b3 24 06 f4 a0 41 ac 58 f8 8a c2 10 6e f6 63 a6 ba 54 05 5f 4c 08 ce 30 dc 8f ed 66 02 90 43 a4 b9 c6 37 aa 9b ec 8a d3 2e b8 48 d6 94 da 8f 30 3f 01 f2 40 f1 a0 75 f3 15 8e ec 85 7c 58 46 34 ab b9 88 b5 e1 14 a8 61 17 72 df ba 0e 5b 31 1c fb 98 81 7c 6c 0a 6b cf 69 13 7f e8 38 61 f6 5c f7 e3 e5 15 3e 78 3b 5e ec db dd ce eb 88 14 a1 e5 8e e7 4d fe 61 6e 12 8a 1e dc ae 4c b5 92 ef c7 c7 af 30 69 82 64 58 58 4e 4e 6b 67 26 c6 d1 6d 9d d8 b6 68 70 c3 be 5e ff 3b af db 95 82 b9 d0 d5 1d 59 f0 3a 2b fa 31 55 74 87 2a 6b 5b 87 6f 98 10 16 49 ca c8 c9 e6 06 5e 2d b6 56 f4 40 55 40 ab ce 56 27 0e 77 e0 89 d9 e7 2c f2 cb 6f 18 b9 dd ea e4 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:15
+    Value   : 29 b2 79 4d 64 d6 13 f6 67 b7 30 2b 3d 15 4f 66 14 01 3c d5 8f 3b 46 37 60 d7 e7 10 08 23 8e 37 81 f5 c6 71 13 b4 bc 15 1b 23 d9 cf 75 71 ff c9 a0 1e 74 22 ab 07 83 46 14 c5 1b 51 3a 94 7e 8b f2 00 b9 55 17 c2 95 52 fe 0c d0 7c 32 93 32 82 8d 11 86 72 b0 dc 13 7d 22 55 d8 b9 cc 4b 6a f6 00 e5 37 6b a7 4b c0 9b 20 21 40 c6 50 e3 a6 c4 a0 f3 7c 59 9c f1 78 d2 05 53 03 5c a5 20 7c 80 bd bc 91 58 4c 15 4f bb 89 1a c7 5d 75 68 e7 dc f7 c7 2a da c6 64 c1 b6 e1 ed 48 6a ef 77 db 50 dc ec 05 bc 41 8f 7d 77 dd 46 5e a9 08 76 74 88 38 40 54 c6 75 c6 41 f0 d7 da 52 b3 e5 4c b7 08 93 db 1c b9 a3 57 12 7d 0b 11 cb 33 b4 08 86 8f 57 44 a1 c4 93 a4 6e 15 2a 5e 77 51 0e cb 31 30 43 2d f5 ec 9c 89 b5 e2 cc 05 36 d9 ff 27 cf 05 4f 7f be d0 bd 87 a0 92 b0 09 4b 74 d1 18 92 f7 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:16
+    Value   : 1f 0b ab 52 48 b1 aa 11 cd 27 03 06 fc 41 6c c5 4e 6b 06 79 2b b4 ae ad 4f 4b 71 1a 25 47 a3 db 6c b1 6e 7a c1 b0 fb 4f b2 dc 82 62 8f 33 67 20 69 a7 60 43 5d bf 1e ce 87 b1 7e fb 4e 26 e0 8d 32 38 79 08 6b 02 5c 11 73 93 ec cd 9d 35 52 62 ad 83 79 d2 de 4a 04 cb 1a 4a 93 e5 7b 2d 99 5d a1 4a 62 cc d4 3b cf f5 aa cb a6 b7 21 9c d5 f8 c4 fe ba c4 39 b3 69 6e 18 fd ef d3 d8 7b 56 c9 08 ed e0 cf 6a 92 75 c8 47 59 4f c3 a1 55 44 04 17 d0 83 b3 12 3c 4f 3a c7 85 c5 9c 51 16 91 a1 39 ca c8 73 9a 3b 2f 77 cf ff db d6 cc ca 35 36 ea 51 6b 2f 58 de 7a 07 10 98 92 f3 ff 96 f7 c1 56 cf c7 73 23 48 a5 29 d4 47 c9 38 e1 f5 6c 27 7c b5 ff 83 88 cf 68 1f 1a 2f 5e 45 8f f4 d8 9f 8b 99 19 f3 a7 43 93 97 f4 b1 e1 0f d0 f0 79 b8 48 08 20 c1 1f 8a 1a 67 b1 8f ca 4e a8 07 3a 8a 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:17
+    Value   : a1 c1 09 66 84 98 42 23 b2 a7 61 f6 b5 ff 99 a6 54 8d 20 e8 f4 72 70 da 50 f2 3c 3b 7b f8 e7 c5 99 4c d3 3f 2b 76 c1 15 b3 72 37 2e 51 1e aa 3a ae 7c 8d f8 70 86 50 60 2e 99 d9 3f a6 6c 96 cf 66 5a 41 a0 ff e4 e2 2e 01 bf b8 b3 6c 44 7c e9 ff a5 20 d3 ca bf 01 6c c3 8e 80 8b 82 78 40 62 5b 98 7f cc a6 2e 02 b5 f7 5e d3 11 7e 10 da 18 32 b3 fe c7 0a 61 0c 3a cb 21 99 b7 ef ce 81 11 80 66 30 db 4e 60 8f a6 ed df 6c cc 45 bf ab 01 ad a7 0d 55 e3 b0 e1 92 3e 16 af 6c e2 a8 49 54 71 f0 94 cb 54 dd df 90 42 46 89 90 df ed 45 a0 76 74 85 33 b8 83 c9 5a 03 93 a8 16 59 8e f2 2a 77 27 4c 9d f2 e7 52 dc 22 72 86 78 90 3b c0 df 56 6a a7 69 50 48 f7 3c 7f 7c 7c b8 82 2e 1b f8 10 c5 09 06 30 9c 54 8d cc d8 18 2f 30 25 45 1a 3f d2 5b 5d 7d d3 ed 7b c9 01 41 6b 21 eb 3f 79 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:18
+    Value   : 97 eb da 7a bc 11 18 54 30 e3 b3 4d 74 af ce ea c8 f8 64 d0 9e e2 40 6d fa 62 5f 1f 85 5d e7 2a a0 15 6e 8c fb ba 76 60 76 32 98 74 76 b3 3e 9b 4b 8e 91 17 00 12 fd 0a db e0 d7 34 05 63 20 60 c1 72 ab df fe 91 f7 e7 b3 0a b4 4b f0 b9 62 80 8b c8 2e 67 c8 49 3e f1 58 32 bf 57 1c 99 5d f6 18 48 4e 2c 1f 3d 7f 66 77 5c 01 f5 84 d7 11 f6 27 b4 e7 b3 99 d0 8a 4f c7 6d 57 cb ac e6 e7 c1 b3 6f 33 d6 27 4d 68 4e ce 42 a9 99 ec a8 05 eb a6 20 a0 5e 9b 7e 3b c9 c8 ee 9e dc 8a 66 35 6f 1b 9b e9 d3 e0 54 75 2f e0 75 f0 9b 7a f6 0c cd 6c eb a4 80 e0 11 4d 43 eb b5 96 8c 57 98 27 63 dd de 6d 44 a2 ba f2 84 af 17 54 10 72 d2 c9 ff 58 e5 45 c6 79 d0 99 7a ae 46 f6 17 44 0b dc 80 ba a6 a6 31 38 49 a9 dc 4a 81 ee b9 c5 80 07 22 89 bb b4 f4 77 b1 11 6a 07 06 1d 6c 03 bc 66 19 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:19
+    Value   : 8c 24 e2 ab 32 a3 22 ee 20 e0 eb 8b f6 e3 2b d3 25 e3 bf 6b 51 df 4c 41 88 74 67 97 47 0c d9 03 c4 14 46 c4 df c9 65 eb d5 4f 26 8b b9 d7 6d 22 11 e7 f4 94 d4 92 03 fe b0 08 4c 4a ca 3f fc d6 a1 bb 88 81 5d f2 88 c4 c5 85 99 40 ac 12 ef 43 48 d3 71 c9 b6 4e 55 a9 5f 22 e4 75 45 2f 1c a6 9e ce bb cd c7 a4 a1 5a a5 28 f4 1d 44 f6 c3 a4 db 72 75 4a e6 d5 24 01 1c 04 58 dd ff 78 97 39 a6 32 b3 b9 04 d9 a1 f0 7d 3f d4 c5 ee 01 7b 24 c5 21 9b db cd 5d c3 62 bb 68 75 15 01 c0 15 57 09 40 dd e7 bc b3 0e ab 90 b9 26 33 f3 0f 26 17 39 1f d7 7a 71 b0 ef a7 3d 26 c0 75 73 04 e8 aa 0b 98 bb 2d 41 9d a0 a1 a3 ec e7 f0 10 a7 36 fb 2f fe 0d 5d 34 17 89 4b ee 74 9b a1 78 ee a5 d6 2b 90 48 fa f8 72 7b 34 aa 09 a0 34 d0 52 f7 f0 8a 57 0f b5 fc 2f f9 74 98 d1 35 91 45 11 7a cd 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:20
+    Value   : b2 7b 5f 1b 40 8a e5 84 d7 f6 e7 36 f5 e6 1c c9 8b fb b8 c3 eb bf f9 ba b1 4c 67 1a b8 3f 46 83 1e 2f 4d 4d 59 b9 d3 eb 54 3d 21 60 6a 47 51 29 4d d8 69 1c 1c fd 67 79 5d a2 5b 9e b4 5a 5b c0 31 35 fd 80 55 36 a0 ca 18 40 0c 4a 0c 05 5a f2 7e c1 a8 0d 59 2c 82 3b b1 49 27 f5 2c 65 0e 7b 19 d4 46 78 c3 c8 ac 2a aa a1 5d c8 6b 11 61 aa 62 ed 13 0d 87 c9 44 52 30 cb dc 1b 18 e1 98 fa aa 4d 0b 8d 66 4a 58 ff 7c 41 c1 8e df 08 0a 26 ba 28 2e 57 da 37 c6 0c 83 fb ee e1 82 b2 d0 16 6d 38 ed 01 39 05 c6 b6 e3 c9 97 0b 66 f1 ba b5 f6 1f 9a 5a da 65 0f c5 91 7e db 08 3e cc f7 4a 99 6f b4 94 3f 93 62 12 89 c5 49 54 5f b6 c8 34 62 64 53 c2 90 73 b5 4e 28 d4 c7 49 cf 29 89 a9 2b 55 9f 08 9e 57 f3 a2 d2 ab c3 9e 5b b1 7b 0d 77 6b 8a 9b 81 df d0 a4 7b 2a 5e 88 b4 2a 05 bd 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:21
+    Value   : 9d 74 22 32 80 3d cf ca a1 99 6e 76 99 d4 52 f7 5d 1f 96 27 bf 5f e6 d2 e8 fc 12 ac 28 80 35 a3 dc 42 96 d7 e9 d1 95 da 6a 6e a2 04 44 b2 4e 8f e7 96 ed c5 c4 f6 7b 7f e8 52 76 2a 13 82 c0 dd fc ac 1b f6 b4 11 01 08 ec e3 59 cd 9c 89 3a 19 13 53 82 0d a3 81 04 ab 65 84 ff e0 5e 14 f5 d7 99 37 6d 9b f8 b9 26 90 37 d9 d5 61 0d 07 c2 4d 63 31 e1 80 f3 05 b3 5b 43 5c e3 8d 6c 32 ba fa 74 86 97 a5 6f 12 ff 67 14 c9 ff 9e 4d 98 c6 f0 19 92 a5 06 60 f8 07 d4 4f 32 85 94 a7 f3 87 9d af 54 10 08 3f 74 67 fb 1d de b7 fe 30 70 bc f7 f4 b5 63 40 5e 9a 5e ac 4e 5b a7 1c 4f f0 bb dd ae 6d f5 43 97 21 36 9e 8f 65 03 fd 52 43 87 dc 33 31 e1 9f 90 7d 80 5d 1a d8 e6 ef 6a 43 42 09 c6 1b a7 34 91 f3 6c 7a c8 67 4a fb 19 64 7e e9 b1 1c 45 6b 16 17 12 c4 9d 4a 8b 2b 84 ba 7c 14 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:22
+    Value   : 6b af 8f 0c 76 e1 22 ee a2 85 89 6a fd 59 65 56 3c 4b e4 cc a0 ab 3c f0 4c 17 c1 68 4e 9b d5 59 0b ce fd fb a0 86 ef 8a d4 df c9 1f c2 f7 69 cb 78 9b 49 75 1f bd bb 0f 79 ae b0 7e d4 d0 a4 5a c7 a3 a4 5b 4f 36 7e 00 68 58 27 76 5a 04 ff 1d ec b7 7c cf 54 41 bf 3e 22 95 59 3d 68 e6 03 cf 49 1f 5d 30 bc 4a 67 97 59 81 b1 37 15 3a c9 d7 8f a3 98 d0 50 f8 7a 18 3d 40 9d 3a 25 c8 0e 15 f6 a5 6b 2b ab 0f d6 91 ee 9b 37 ee f9 b3 bd fa 60 9d 4f 1d 73 2a 5d 27 e6 43 6f 4e f2 55 81 77 8a 57 0e 13 50 9b 13 ee 1e 22 40 b9 14 69 f8 f7 c4 a3 8a 64 a5 d7 b5 78 6d 2b cc 32 53 d2 dd a7 79 cf 7a e5 85 5f 7f da 3c c9 bf d8 9e f7 56 79 ad 73 b7 a9 90 d2 ca b9 c2 db 8c eb 77 93 1c fa 21 18 ba 6b 73 7f 6f b4 ff 7c bc 54 93 f4 cf 9e b9 cb 2c 66 cf c4 3a ef bd 34 98 90 7c b5 00 a5 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:23
+    Value   : 08 e9 07 f3 f1 2e 6d 0c af dc 64 a0 e2 f1 0f c5 f0 e0 85 d4 8b a8 3a c9 58 25 a1 75 51 8f 73 d6 be 42 49 be 82 90 94 d0 05 e6 8f c5 40 81 b4 93 dc 84 6f 36 dc 03 38 cd 78 1b 2e f6 a8 4d e0 1e a8 1f 5f 1e 41 57 f1 39 3d ce 0b 8c 09 d1 16 a1 cd 5a 81 5d 84 c0 82 35 39 b6 95 4a 02 28 66 ca 55 80 90 37 81 f9 11 c2 8a 30 a6 da 16 da 19 81 8e bd 93 ce 7d 23 98 a5 0f f0 6e 67 cb 7c 18 8b d5 4c 94 37 f0 90 d3 a8 90 9c f1 cf 53 bd 39 e6 42 0a 09 91 d6 29 65 f9 92 3e 81 4f f6 c3 1a eb 58 0e 04 6b ca 90 40 f7 19 5d 19 1c 41 fe f5 83 24 80 45 b5 ba f7 1f 82 be 9a 0b b8 13 ea 36 be 66 a0 65 fb a4 15 2a 9a 77 f4 0e eb 98 3d 49 34 60 f3 19 9b 08 74 2f d2 d6 26 4a 98 ac bc 9d 19 2b 3e 81 60 f0 ef 45 c9 f6 21 69 f7 bc fb 25 79 78 2b d8 e7 c6 7f 5b 44 fd 3f bc 16 a5 c3 66 91 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:24
+    Value   : 55 d9 23 6c d8 c1 c6 a7 e2 8b 62 68 5d e6 ab 02 5d a9 ff e7 15 7c c5 9d 8e 29 44 73 5f 6f 2d be 85 5d 1d 22 30 7b c3 ab be 74 d1 a6 f0 45 d5 8e cb 16 e7 9a c4 ae 2c 05 9d 54 6c c6 9d 28 21 7c fe 02 91 a0 74 96 08 b7 03 53 f9 4e fa 61 ad f5 ea a5 39 36 7d d9 1b 68 26 9a 56 53 92 02 ba c4 7a 17 3c 38 ee c3 6d 0d b9 a0 6a fd 58 b4 01 da 30 af f5 ff a3 f3 75 4a 7a 79 f8 7c e1 b7 cc 9f e7 ba 4a 4b 5a a3 b5 ac 5b a5 6c 2a 86 66 68 c0 ca db 17 00 ca df ef 67 95 25 19 1b 88 92 a5 9d e1 d3 11 3b 31 c4 d9 8d ec 32 9c 85 af c9 a4 52 c7 ae 1b 09 70 25 74 db f7 f4 10 2b bc c8 cf 95 39 74 3d 0c 8e 5d cb f7 61 ce b9 ea 57 8d 2e 4b a5 a7 ae 5a b4 66 fa 45 5c 5d ca 84 ef b9 0c fa ab ac 1a 38 d3 c6 d4 af 53 68 bb d9 ac e5 64 d7 9b 78 31 5f 74 96 4e 29 c2 5b 39 ff f3 2f 95 3d 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:25
+    Value   : 73 2c 6b 0c 0f b1 bd c9 f0 29 60 12 e8 c0 87 51 89 4b 12 be ae 1c b2 77 95 dd bd 51 09 ef f9 4e 7d 86 58 69 a2 43 26 d7 4d 72 19 50 58 c1 57 8c ca 8c 00 d1 dc b2 aa c2 03 70 df fa 35 01 62 29 ff 28 18 11 0a 78 52 a6 13 68 35 25 23 2b 56 1c 85 de fb ac 8d 98 05 ec 15 c5 c1 3b 5f 88 d6 11 9f 91 65 59 87 7b 2c 82 49 c4 fb 1c b4 c6 29 4f 99 93 b4 fb 09 87 f2 d8 30 fa 7e 8b 27 16 5f c6 7e 8e 4d 63 69 f0 d6 6b 1e 74 9b b7 6c 9e c4 7c ac 0b 37 ab d2 00 cf 7e 25 57 1b 6d f0 18 2d 44 5f af 73 8d 0f 0b 3d 25 fe 1e b7 f0 6e 20 6c 5d 39 f0 2c 3a 3c c3 e1 f7 51 8b 56 9a d2 b2 31 b2 ac 15 0b 38 00 0e c0 ee c9 a6 94 a5 82 12 8a 77 eb b9 41 da 3a 65 5b b3 8f 7d de be 69 35 ec 9c 0f 0a b6 e1 aa b8 b1 ad fb 70 aa 7b 0f 92 37 e8 40 57 89 6e d2 b4 8a cf 17 19 1c 33 78 ad 99 1b 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:26
+    Value   : 5f 12 86 d4 43 8d 63 91 d6 78 28 7f 8f bc 39 19 5a cb 82 3a 5d 09 4e 4b 2b fa f3 15 b8 24 fa 37 18 40 bb 96 12 87 b3 f3 d5 a3 85 f8 08 8a ef a3 35 ba 89 e8 83 26 cb 77 a4 5b c5 44 01 45 ef 0d 8d 46 34 39 b5 cf fb d4 26 f2 37 aa e6 e9 1f 6f fc 00 80 f1 e2 e3 7f 50 db be 8e d3 a4 02 a5 9c 05 84 b4 48 0f 62 25 07 64 af 08 28 df bf b4 3b 91 97 e6 f2 d0 5f 8c 68 14 0c ce 4e 66 54 8d 22 7b 42 2d e6 5c 29 9f 94 b1 45 75 30 ad 01 ef 43 e4 ea 91 72 ad ec a3 27 29 47 62 3d d0 8b 7a 49 fd 1e 8f f8 c4 b3 06 ef fa f3 5b f3 20 81 f5 4e 7f e1 0c e5 cf 59 2e 79 0c 0e 6f b9 da 3c 63 09 93 68 8a 07 65 dc cf 62 48 42 0a 1a 25 6c ef 8a f2 d9 6b 9a f1 9c 84 02 56 60 66 50 a6 c9 8d 94 9d 86 a7 f4 37 80 f7 d2 52 4b eb 52 a5 61 8b 83 46 06 25 45 4e e2 a3 1f 8e 5c 29 96 31 ea 83 86 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:27
+    Value   : 4c 1f e9 33 78 dc e1 57 f8 fc eb d1 a0 fd cf 03 40 e9 8d 61 eb 59 29 e2 48 e3 d4 8a c4 32 e8 bd e8 2b 11 bd 17 ef 4c 7e bf 49 4c 50 24 eb a8 0c 0e 7a cd 44 5f 61 a2 e3 93 17 1a 79 d0 c4 2a ba 87 46 5c 73 e6 3c ec 82 ee be 13 16 83 b8 06 6c e2 b4 b1 ba 1d 45 f0 92 ce 7f e2 38 55 66 36 db 01 d3 6c 01 97 af 53 35 1a 48 58 92 59 df 2f 97 b1 c0 55 98 a7 b9 02 77 01 1b 77 89 50 09 60 62 2e 7d cf 3f 19 7f 0f 1c 52 29 82 63 6e 72 11 b6 e5 d1 09 01 d0 89 6d 0e 75 18 6d 55 06 0f 61 5f 09 d2 7d 0b 2a ce d1 c1 25 e1 e7 3e fa 44 15 5f f6 29 39 6e 34 9f 4d 2a 4a 73 41 8d 67 8d 38 35 19 0f 6b 8a b5 11 c3 4a d3 dd a2 da 14 f4 ed 65 32 14 3c 5f 20 51 ad 47 b6 f0 11 62 e3 e7 98 1a ee 86 1f b9 30 04 7e ab 94 8d 2c 50 37 07 83 a2 78 66 26 ca 83 a0 4b 18 1b d8 c6 47 c6 2c 69 c4 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:28
+    Value   : cc 84 19 21 be 7d e5 26 fb 63 71 93 14 b2 20 b1 1d eb 2a 94 ee a1 98 de e9 90 88 5a c1 1e 73 d9 cb 9a a6 ae 5f 83 75 d9 19 73 4e b3 da e3 09 b7 56 82 47 30 a0 b0 0d 50 4a ef 80 44 4a b7 0a 17 6b d4 40 10 5e 35 3d bd e3 f7 28 43 1c ba b2 4f d5 34 b0 51 16 90 76 1b b1 c3 8e 2f 6a 2e 2b 67 e4 b1 3b e2 ef b1 c7 df c8 83 5a 12 10 10 04 74 e6 29 37 13 b5 2d d9 35 03 50 63 22 5a f6 1c ff ed 48 2e f9 49 a1 39 2d b7 63 8d 8c ca 06 25 87 34 f7 b6 33 13 3c 05 cf dc aa 04 f8 17 f1 5c 97 bd aa cd 2b 27 1f 03 8a 2c 43 bb e9 5b 81 35 96 4c f9 a2 59 c4 4b 03 59 25 b3 9d 1e e4 a4 a6 df bf 0f 45 45 d6 5c 11 95 17 cb 9e 1b 58 80 7f 50 f5 71 7a e1 dc af 62 55 33 d3 18 ad c7 f1 b3 53 00 a3 40 8c 9e 4a 36 bd 26 96 30 9e b5 74 14 4e f5 40 76 09 34 85 db 4a 79 68 cc e3 cc ff 20 0b 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:29
+    Value   : 9e d2 16 a2 68 4d 78 c9 be 4a 16 85 52 a1 d5 49 a3 0b 81 9a bc ca 3f 4d 5a bf 2e 1b 94 50 b0 dc ca 7c 1d fb c6 38 48 eb 31 5e 77 6b c8 fa 8d 23 7a ab 72 bc 25 11 d3 f9 a5 30 5e 0f 9e aa 95 d0 bd de 1b ee f1 33 a0 24 bd be e0 ef 89 6c a4 78 49 fe 46 d4 81 ce 0e 22 6e 35 43 af fa e8 92 06 02 ea 34 b4 25 63 01 17 e6 80 dc 6d 34 1c e4 88 7a fd bd b8 dd 2b 78 b0 48 53 f3 f8 5c 64 eb 5f 28 30 e5 c8 8a 75 42 2a d2 b2 e5 25 03 6e 2e 27 0d 1a 79 0f aa bd bd 6b be 47 24 77 36 0b c6 27 ae c3 48 f8 a3 c9 df f3 d3 8e d0 d9 9a 3b 6f 0f c2 6a 41 33 9a 63 4c 4d 3f d3 19 ec c0 58 a7 a9 01 6c 93 04 fe b9 17 4a d7 02 72 cd 93 55 2f 8c f6 8e 94 20 5a 41 e7 a6 a0 04 e4 3a a5 aa 1a a3 fa 76 98 06 af 65 2b 90 90 cd 4d 7b 1a 04 75 82 b9 58 ed a3 f0 80 92 00 45 55 ca bc e0 72 19 98 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:30
+    Value   : f7 6d 9f 1b 18 ec e9 6b d0 96 2e ad 0d 34 4d 1c 0c 65 80 7f 50 7b 96 07 63 ef ef 44 30 9e 5b 2f e8 e9 ec 98 f0 f7 2e 80 41 e0 cc dc 92 4b 87 08 4e 75 54 74 65 6a 68 94 53 3e 4b 0c 21 e9 f5 35 e1 78 cc e5 34 d7 a6 0d 66 03 04 e3 e2 b4 47 4a a6 8d 42 bd d6 f1 38 2d ba c2 dd 46 9a 18 d6 41 8b 4c 70 00 0d 8a 32 e9 98 7c 64 48 a0 4f 2b 1f a6 55 83 6d a5 fe 1d b7 ad 91 1f 0d 21 b6 0b fd 25 d2 54 20 56 aa 34 8e 07 1d 4d 5b 19 17 8f 30 2e 70 5d 69 4b 27 c7 8f c8 fe cb 25 24 42 db 86 e1 1e e5 50 20 39 25 a8 dc 9f 4e 4a dc 60 76 b6 cc c8 bc 54 74 cd b9 fe 7d 10 b8 23 03 70 36 1c cc a8 c6 6e 15 3e a6 e4 74 9e 7f 47 c4 71 da ed 91 f0 b8 81 f1 a4 5d 36 2e b7 a9 0d a3 8a ab a3 e6 55 42 0b d8 6c d9 02 fc ad d1 3f 37 ae b9 1a 32 4a d4 62 2d 10 03 df 45 6e e6 8e 93 0f a9 91 
+  **ATTRIBUTE**
+    Flags   : 00000000 - 0
+    Keyword : Microsoft_WindowsLive:authstate:31
+    Value   : 87 bb 40 00 00 00 73 0e a9 b0 26 3b 1f 13 08 f9 9a 50 67 fa ec f8 d2 ca d2 4c 75 b2 01 c4 98 e2 c3 e0 79 6a 0a 88 d8 3f c5 4f 48 7c 90 5a 6e 64 64 11 62 e6 7e a5 c1 9c 4b 82 d7 e9 ae b8 13 0e 37 25 be d8 19 1d 
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:47,090 - INFO - [SUCCESS] Decrypted: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E4679DF718E651BB463C85F1368BFB3F with Master Key: 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+2024-12-30 18:04:47,091 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E4679DF718E651BB463C85F1368BFB3F /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 1609c4d322c6d4f164c69c00b318313d1cb5fa97c58fa89f3d1bbcd97e1e5984
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : f285239a0a29c5e5bd272cd7fd7d90ea9e1a48bc04af637712c6743f120003d7
+  dwDataLen          : 000000e0 - 224
+  pbData             : c312f2ff0632eee9b78ae0beef20e259fcc32a09baec96deca420f19a8843a996b9b731fadccc1225711b094baadc87226352597caad820bce5a81e88beee4711f204876cd55dda5e70022dfd33fd28d948e1be7ecbfd8f2d4039829409127f3ee2682714a25afd074a0670a47a4ec4d67128c02d95a6137309ead14c9b0e70ff0e25d3614b34c885a6b95796c8d01de8cd5be6ad0d11df8155b1e3c3e3e41c53407696d1de8cf48650fa57c562b4e66ef8319025fd322a75122f17a387a8e3f4b91bda2204dc1f38769104e4ab3d0e3f088a93878406215eecc60b60fdc227b
+  dwSignLen          : 00000040 - 64
+  pbSign             : 49d14e22f3c93b3d8be36739e8d284146d91532d12c424099a38d58e8480ab92e95121899d83e94132a6cfd1ec1a5e93735702800746a890e8dc3aadab7aee15
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 000000d4 - 212
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000001 - 1 - generic
+  Flags          : 00000000 - 0
+  LastWritten    : 6/21/2024 3:58:12 AM
+  unkFlagsOrSize : 00000018 - 24
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : LegacyGeneric:target=TERMSRV/192.168.70.132
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : Administrator
+  CredentialBlob : C@mVa04dm1n 
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:47,100 - INFO - [RDP CREDENTIAL] Successfully decrypted RDP credential file: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E4679DF718E651BB463C85F1368BFB3F
+2024-12-30 18:04:47,100 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E4679DF718E651BB463C85F1368BFB3F /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 1609c4d322c6d4f164c69c00b318313d1cb5fa97c58fa89f3d1bbcd97e1e5984
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : f285239a0a29c5e5bd272cd7fd7d90ea9e1a48bc04af637712c6743f120003d7
+  dwDataLen          : 000000e0 - 224
+  pbData             : c312f2ff0632eee9b78ae0beef20e259fcc32a09baec96deca420f19a8843a996b9b731fadccc1225711b094baadc87226352597caad820bce5a81e88beee4711f204876cd55dda5e70022dfd33fd28d948e1be7ecbfd8f2d4039829409127f3ee2682714a25afd074a0670a47a4ec4d67128c02d95a6137309ead14c9b0e70ff0e25d3614b34c885a6b95796c8d01de8cd5be6ad0d11df8155b1e3c3e3e41c53407696d1de8cf48650fa57c562b4e66ef8319025fd322a75122f17a387a8e3f4b91bda2204dc1f38769104e4ab3d0e3f088a93878406215eecc60b60fdc227b
+  dwSignLen          : 00000040 - 64
+  pbSign             : 49d14e22f3c93b3d8be36739e8d284146d91532d12c424099a38d58e8480ab92e95121899d83e94132a6cfd1ec1a5e93735702800746a890e8dc3aadab7aee15
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 000000d4 - 212
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000001 - 1 - generic
+  Flags          : 00000000 - 0
+  LastWritten    : 6/21/2024 3:58:12 AM
+  unkFlagsOrSize : 00000018 - 24
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : LegacyGeneric:target=TERMSRV/192.168.70.132
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : Administrator
+  CredentialBlob : C@mVa04dm1n 
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:47,264 - INFO - [SUCCESS] Decrypted: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E7114FA23306676C514B5117DCE04880 with Master Key: 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+2024-12-30 18:04:47,265 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E7114FA23306676C514B5117DCE04880 /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : e072578cf53d2ccc579df7f10571c406c27cdea960a28bde0c0e0f2c4e540089
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : 1720a0cd0c51d61e60bc15a96afd39457ccbdc7fc2e64ceedf5471a2ef40874c
+  dwDataLen          : 000000b0 - 176
+  pbData             : 7c8836fe7f8046d240ddf80d2ed37e455504ff0e90d1ad40eecbc46ebe21b1fdc3f39560994fe95aa7aeec5a1b52bc8faa202bd339c4ad6dadec15df5d6fc63da171e01eb2f7bcffae44b2e7919343d6f38cc1cb739f10f430790cdcbc614799920c3ffa92057b17ab663ead31dcffb656f0d08c1d3f512146d38451f276de37dd7d658b7d0cc6da3ea7c3ae4d6b454eb682ac04e9143382d616d541ddbd30ef54966c7cad7238eeca015cda61043330
+  dwSignLen          : 00000040 - 64
+  pbSign             : f8256ecc5a1cefc95feacccc71176348e68dc65912032e43602f7c56b7049100d89e7d136610023c4d2c3b265a6285a48ce698295f4a124e1004e36dc00912dd
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 000000ac - 172
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/20/2024 4:01:05 PM
+  unkFlagsOrSize : 00000008 - 8
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.70.131
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : tommyxiaomi
+  CredentialBlob : 1
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:47,272 - INFO - [RDP CREDENTIAL] Successfully decrypted RDP credential file: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E7114FA23306676C514B5117DCE04880
+2024-12-30 18:04:47,273 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E7114FA23306676C514B5117DCE04880 /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : e072578cf53d2ccc579df7f10571c406c27cdea960a28bde0c0e0f2c4e540089
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : 1720a0cd0c51d61e60bc15a96afd39457ccbdc7fc2e64ceedf5471a2ef40874c
+  dwDataLen          : 000000b0 - 176
+  pbData             : 7c8836fe7f8046d240ddf80d2ed37e455504ff0e90d1ad40eecbc46ebe21b1fdc3f39560994fe95aa7aeec5a1b52bc8faa202bd339c4ad6dadec15df5d6fc63da171e01eb2f7bcffae44b2e7919343d6f38cc1cb739f10f430790cdcbc614799920c3ffa92057b17ab663ead31dcffb656f0d08c1d3f512146d38451f276de37dd7d658b7d0cc6da3ea7c3ae4d6b454eb682ac04e9143382d616d541ddbd30ef54966c7cad7238eeca015cda61043330
+  dwSignLen          : 00000040 - 64
+  pbSign             : f8256ecc5a1cefc95feacccc71176348e68dc65912032e43602f7c56b7049100d89e7d136610023c4d2c3b265a6285a48ce698295f4a124e1004e36dc00912dd
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 000000ac - 172
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/20/2024 4:01:05 PM
+  unkFlagsOrSize : 00000008 - 8
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.70.131
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : tommyxiaomi
+  CredentialBlob : 1
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:47,433 - INFO - [SUCCESS] Decrypted: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E80F5D2B48E15FBDF9878791495BF295 with Master Key: 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+2024-12-30 18:04:47,434 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E80F5D2B48E15FBDF9878791495BF295 /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 6d9bd05a31c8af28d6436d235ef01fb979d8861f0d68721763682ddee22e64fe
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : dfa0f88b8c3c4c1adffdde68469f97b77876c46f70831b26787b805e80cc7b13
+  dwDataLen          : 000000c0 - 192
+  pbData             : ab33d8a434cbefcfd244a8a51e44d4c6683eee99153129015dc8fd831da2fe4f4628fcf04432bf6ae04d7e39b5ee2ede5890bfcc3779cb26268b792ade9fb561f29f6c777eae6145aa92ebbf1571c8f7d02a3ef305d6ad7647a543a4addb49d5761523c72a72f98c67dc471c50c65d174772962b09422059b65db02c8eed74890231e42076fe500739e18675c791e3c93c546c1294f01b3398e1f50c4728aa3cf486424913705a7b0051b15856006f627af1f64cb1edec68383f6fd57908c4a3
+  dwSignLen          : 00000040 - 64
+  pbSign             : aeebd8cbd2ad4d112a37be78dc27232a017af82b3f4ce17c9e986958527f345a269916574c85b2e12fcd8d89d06edac5bf452fb0d92377b63f56191666aa8769
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 000000b0 - 176
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/20/2024 3:33:16 AM
+  unkFlagsOrSize : 00000008 - 8
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.25.129
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : Administrator
+  CredentialBlob : 1
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:47,446 - INFO - [RDP CREDENTIAL] Successfully decrypted RDP credential file: C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E80F5D2B48E15FBDF9878791495BF295
+2024-12-30 18:04:47,446 - INFO - [RDP DETAILS] .#####.   mimikatz 2.2.0 (x64) #18362 Feb 29 2020 11:13:36
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > http://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > http://pingcastle.com / http://mysmartlogon.com   ***/
+
+mimikatz(commandline) # dpapi::cred /in:C:\Users\a\Desktop\latus\Users\emman.t\AppData\Local\Microsoft\Credentials\E80F5D2B48E15FBDF9878791495BF295 /masterkey:54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**BLOB**
+  dwVersion          : 00000001 - 1
+  guidProvider       : {df9d8cd0-1501-11d1-8c7a-00c04fc297eb}
+  dwMasterKeyVersion : 00000001 - 1
+  guidMasterKey      : {3926d2ea-46e4-461e-8344-3232f48e13b5}
+  dwFlags            : 20000000 - 536870912 (system ; )
+  dwDescriptionLen   : 00000030 - 48
+  szDescription      : Local Credential Data
+
+
+  algCrypt           : 00006610 - 26128 (CALG_AES_256)
+  dwAlgCryptLen      : 00000100 - 256
+  dwSaltLen          : 00000020 - 32
+  pbSalt             : 6d9bd05a31c8af28d6436d235ef01fb979d8861f0d68721763682ddee22e64fe
+  dwHmacKeyLen       : 00000000 - 0
+  pbHmackKey         : 
+  algHash            : 0000800e - 32782 (CALG_SHA_512)
+  dwAlgHashLen       : 00000200 - 512
+  dwHmac2KeyLen      : 00000020 - 32
+  pbHmack2Key        : dfa0f88b8c3c4c1adffdde68469f97b77876c46f70831b26787b805e80cc7b13
+  dwDataLen          : 000000c0 - 192
+  pbData             : ab33d8a434cbefcfd244a8a51e44d4c6683eee99153129015dc8fd831da2fe4f4628fcf04432bf6ae04d7e39b5ee2ede5890bfcc3779cb26268b792ade9fb561f29f6c777eae6145aa92ebbf1571c8f7d02a3ef305d6ad7647a543a4addb49d5761523c72a72f98c67dc471c50c65d174772962b09422059b65db02c8eed74890231e42076fe500739e18675c791e3c93c546c1294f01b3398e1f50c4728aa3cf486424913705a7b0051b15856006f627af1f64cb1edec68383f6fd57908c4a3
+  dwSignLen          : 00000040 - 64
+  pbSign             : aeebd8cbd2ad4d112a37be78dc27232a017af82b3f4ce17c9e986958527f345a269916574c85b2e12fcd8d89d06edac5bf452fb0d92377b63f56191666aa8769
+
+Decrypting Credential:
+ * masterkey     : 54c80986172f586f32e6f3e3ffe9901ddbe3f0d39d186adb7dd287ff3ff8614addf2f3ef1ce1f95a28f8115c463b93e2481e2a56a68678be9a0572867ec0976c
+**CREDENTIAL**
+  credFlags      : 00000030 - 48
+  credSize       : 000000b0 - 176
+  credUnk0       : 00000000 - 0
+
+  Type           : 00000002 - 2 - domain_password
+  Flags          : 00000000 - 0
+  LastWritten    : 6/20/2024 3:33:16 AM
+  unkFlagsOrSize : 00000008 - 8
+  Persist        : 00000002 - 2 - local_machine
+  AttributeCount : 00000000 - 0
+  unk0           : 00000000 - 0
+  unk1           : 00000000 - 0
+  TargetName     : Domain:target=TERMSRV/192.168.25.129
+  UnkData        : (null)
+  Comment        : (null)
+  TargetAlias    : (null)
+  UserName       : Administrator
+  CredentialBlob : 1
+  Attributes     : 0
+
+mimikatz(commandline) # exit
+Bye!
+2024-12-30 18:04:47,452 - INFO - [INFO] RDP Credential Extraction Complete.
